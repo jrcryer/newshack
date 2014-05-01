@@ -7652,10 +7652,10 @@ td.visible-print {
 .header h1 {
   display: block;
   width: 240px;
-  height: 44px;
-  margin: 8px 0 6px;
+  height: 56px;
+  margin: 8px 0;
   text-indent: -9999px;
-  background: url("/img/logo.png") no-repeat 8px 0;
+  background: url("/img/logo.png") no-repeat 8px 8px;
 }
 
 /* line 15, ../../app/styles/modules/_header.scss */
@@ -7671,10 +7671,10 @@ td.visible-print {
 /* line 2, ../../app/styles/modules/_button.scss */
 .btn-share a {
   display: block;
-  width: 58px;
-  height: 58px;
+  width: 72px;
+  height: 72px;
   text-indent: -9999px;
-  background: #cecece url("/img/share.png") no-repeat top left;
+  background: #cecece url("/img/share.png") no-repeat 8px 8px;
 }
 /* line 10, ../../app/styles/modules/_button.scss */
 .header .btn-share {
