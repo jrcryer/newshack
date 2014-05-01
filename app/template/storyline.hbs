@@ -1,0 +1,32 @@
+<div class="storyline">
+    {{#each year}}
+        <div class="year">
+            {{this.label}}
+            {{#each this.events}}
+                <div class="story">
+                    <a href="#" data-id="{{this.uri}}">
+                        <div class="date">
+                            {{this.startDate}}
+                        </div>
+                        <div class="content">
+                            {{this.title}}
+                        </div>
+                    </a>
+                </div>
+            {{/each}}
+        </div>
+    {{else}}
+        {{#each events}}
+            <div class="story">
+                <a href="#" data-id="{{this.uri}}">
+                    <div class="date">
+                        {{this.startDate}}
+                    </div>
+                    <div class="content">
+                        {{this.title}}
+                    </div>
+                </a>
+            </div>
+        {{/each}}
+    {{/each}}
+</div>

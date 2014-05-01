@@ -6,13 +6,16 @@ define([
   'backbone',
   'handlebars',
   'collection/storyline',
-  'view/storyline',
-], function($, _, Backbone, Handlebars, Store, Storyline){
+  'views'
+], function($, _, Backbone, Handlebars, Store, Views) {
 
   return {
     initialize: function() {
-      Store.get('sample', function(storyline) {
-        new Storyline(Handlebars, storyline).render();
+      Store.get('sample', function(data) {
+        new Views.Header(data).render();
+        new Views.Title(data.storyline).render();
+        new Views.Topics(data.storyline.topics).render();
+        new Views.Storyline(data.storyline).render();
       });
     }
   };

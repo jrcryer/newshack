@@ -3,28 +3,28 @@
 define(['jquery', 'backbone', 'template'], function($, Backbone, Template) {
   return Backbone.View.extend({
 
-    el: '#widget-story',
+    el: '#widget .topics',
 
     /**
      * @var data
      */
-    storyline: null,
+    topics: null,
 
     /**
      * @var template
      */
-    template: Template['app/template/story.hbs'],
+    template: Template['app/template/topics.hbs'],
 
     /**
      * Set the storyline
      */
-    initialize: function(storyline) {
-      this.storyline = storyline;
+    initialize: function(topics) {
+      this.topics = topics;
     },
 
     render: function() {
       this.$el.html(
-        this.template({storyline: this.storyline})
+        this.template({topics: this.topics})
       );
       return this;
     }

@@ -3,7 +3,7 @@
 define(['jquery', 'backbone', 'template'], function($, Backbone, Template) {
   return Backbone.View.extend({
 
-    el: '#widget-story',
+    el: '#widget-creative',
 
     /**
      * @var data
@@ -13,7 +13,7 @@ define(['jquery', 'backbone', 'template'], function($, Backbone, Template) {
     /**
      * @var template
      */
-    template: Template['app/template/story.hbs'],
+    template: Template['app/template/creative.hbs'],
 
     /**
      * Set the storyline
