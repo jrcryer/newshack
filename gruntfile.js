@@ -47,7 +47,7 @@ module.exports = function(grunt) {
         },
         jshint: {
             all: {
-                src: ['gruntfile.js', 'public/js/**/*.js', 'test/**/*.js', 'app/controllers/**/*.js', 'app/views/**/*.js'],
+                src: ['gruntfile.js', 'public/js/**/*.js', 'test/**/*.js', 'app/controllers/**/*.js', 'app/views/**/*.js'   ],
                 options: {
                     jshintrc: true
                 }
@@ -62,6 +62,11 @@ module.exports = function(grunt) {
                 files: {
                     'public/js/newshack/template.js': ['app/template/**/*.hbs']
                 }
+            }
+        },
+        clean: {
+            clean: {
+                src: ['public/js/newshack/template.js']
             }
         },
         nodemon: {
@@ -124,10 +129,10 @@ module.exports = function(grunt) {
     grunt.option('force', true);
 
     //Default task(s).
-    grunt.registerTask('default', ['jshint', 'handlebars', 'compass', 'concurrent']);
+    grunt.registerTask('default', ['clean', 'jshint', 'handlebars', 'compass', 'concurrent']);
 
     // Default task(s).
-    grunt.registerTask('build', ['jshint', 'handlebars', 'compass', 'bowerInstall']);
+    grunt.registerTask('build', ['clean', 'jshint', 'handlebars', 'compass', 'bowerInstall']);
 
     //Test task.
     grunt.registerTask('test', ['mochaTest']);
