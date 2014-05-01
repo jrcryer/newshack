@@ -1,0 +1,15 @@
+.btn-share {
+    a {
+        display: block;
+        width: 58px;
+        height: 58px;
+        text-indent: -9999px;
+        background: $highlight url('/img/share.png') no-repeat top left;
+    }
+
+    .header & {
+        position: absolute;
+        top: -8px;
+        right: 0;
+    }
+}

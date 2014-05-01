@@ -7629,7 +7629,53 @@ td.visible-print {
     display: none !important;
   }
 }
-/* line 5, ../../app/styles/app.scss */
+/* line 1, ../../app/styles/modules/_layout.scss */
+.widget {
+  width: 480px;
+  border: 1px solid #E1E1E1;
+}
+
+/* line 1, ../../app/styles/modules/_header.scss */
+.header {
+  position: relative;
+  border-bottom: 2px solid #cecece;
+}
+/* line 5, ../../app/styles/modules/_header.scss */
+.header h1 {
+  display: block;
+  width: 240px;
+  height: 44px;
+  margin: 8px 0 6px;
+  text-indent: -9999px;
+  background: url("/img/logo.png") no-repeat 8px 0;
+}
+
+/* line 14, ../../app/styles/modules/_header.scss */
+.title {
+  margin: 16px 8px;
+}
+/* line 17, ../../app/styles/modules/_header.scss */
+.title h1 {
+  margin: 0 108px;
+  font-size: 1.5em;
+}
+
+/* line 2, ../../app/styles/modules/_button.scss */
+.btn-share a {
+  display: block;
+  width: 58px;
+  height: 58px;
+  text-indent: -9999px;
+  background: #cecece url("/img/share.png") no-repeat top left;
+}
+/* line 10, ../../app/styles/modules/_button.scss */
+.header .btn-share {
+  position: absolute;
+  top: -8px;
+  right: 0;
+}
+
+/* line 10, ../../app/styles/app.scss */
 body {
   margin: 24px 0;
 }

@@ -3,7 +3,7 @@
 define(['jquery', 'backbone', 'template'], function($, Backbone, Template) {
   return Backbone.View.extend({
 
-    el: '#widget .topics',
+    el: '.widget .topics',
 
     /**
      * @var data

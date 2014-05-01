@@ -3,7 +3,7 @@
 define(['jquery', 'backbone', 'template'], function($, Backbone, Template) {
   return Backbone.View.extend({
 
-    el: '#widget .title',
+    el: '.widget .title',
 
     /**
      * @var data
@@ -25,7 +25,7 @@ define(['jquery', 'backbone', 'template'], function($, Backbone, Template) {
      */
     initialize: function(storyline) {
       this.storyline = storyline;
-      Backbone.on("date:change", this.onDateChange, this);
+      Backbone.on('date:change', this.onDateChange, this);
     },
 
     render: function() {

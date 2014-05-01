@@ -12,7 +12,7 @@ define([
   return {
     initialize: function() {
       $(function() {
-        var story = $('#widget').data('story');
+        var story = $('.widget').data('story');
         console.log('Loading story' + story);
         Store.get(story, function(data) {
           new Views.Header(data).render();
