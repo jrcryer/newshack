@@ -1,14 +1,15 @@
 <div class="storyline">
     {{#each years}}
-        <div class="year">
-            {{@key}}
+        <div class="year-group">
+            <div class="year">{{@key}}</div>
             {{#each this}}
                 <div class="story">
                     <a href="#" data-id="{{this.uri}}">
                         <div class="date">
-                            {{this.startDate}}
+                            <span class="day">{{day this.startDate}}</span>
+                            <span class="month">{{month this.startDate}}</span>
                         </div>
-                        <div class="content">
+                        <div class="title">
                             {{this.title}}
                         </div>
                     </a>
@@ -20,7 +21,8 @@
             <div class="story">
                 <a href="#" data-id="{{this.uri}}">
                     <div class="date">
-                        {{this.startDate}}
+                        <span class="day">{{day this.startDate}}</span>
+                        <span class="month">{{month this.startDate}}</span>
                     </div>
                     <div class="content">
                         {{this.title}}

@@ -7635,12 +7635,20 @@ td.visible-print {
   border: 1px solid #E1E1E1;
 }
 
+/* line 6, ../../app/styles/modules/_layout.scss */
+.content {
+  padding: 8px;
+  background: #cecece;
+  height: 100%;
+}
+
 /* line 1, ../../app/styles/modules/_header.scss */
 .header {
+  font-family: "Helvetica", Arial, "sanserif";
   position: relative;
   border-bottom: 2px solid #cecece;
 }
-/* line 5, ../../app/styles/modules/_header.scss */
+/* line 6, ../../app/styles/modules/_header.scss */
 .header h1 {
   display: block;
   width: 240px;
@@ -7650,11 +7658,11 @@ td.visible-print {
   background: url("/img/logo.png") no-repeat 8px 0;
 }
 
-/* line 14, ../../app/styles/modules/_header.scss */
+/* line 15, ../../app/styles/modules/_header.scss */
 .title {
   margin: 16px 8px;
 }
-/* line 17, ../../app/styles/modules/_header.scss */
+/* line 18, ../../app/styles/modules/_header.scss */
 .title h1 {
   margin: 0 108px;
   font-size: 1.5em;
@@ -7675,7 +7683,98 @@ td.visible-print {
   right: 0;
 }
 
-/* line 10, ../../app/styles/app.scss */
+/* line 1, ../../app/styles/modules/_topics.scss */
+.topics-list {
+  margin: 0 108px 8px;
+  padding: 0;
+  list-style: none;
+}
+/* line 21, ../../app/components/sass-bootstrap/lib/_mixins.scss */
+.topics-list:before, .topics-list:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */
+}
+/* line 25, ../../app/components/sass-bootstrap/lib/_mixins.scss */
+.topics-list:after {
+  clear: both;
+}
+/* line 7, ../../app/styles/modules/_topics.scss */
+.topics-list .topic {
+  float: left;
+  display: block;
+  padding: 8px 8px 8px 18px;
+  background: #b90000 url(/img/dots.png) 5px 5px no-repeat;
+  margin: 0 8px 0 8px;
+  text-decoration: none;
+  color: white;
+}
+/* line 16, ../../app/styles/modules/_topics.scss */
+.topics-list .topic:hover {
+  text-decoration: underline;
+}
+
+/* line 1, ../../app/styles/modules/_storyline.scss */
+.storyline {
+  background: url(/img/storyline.png) repeat-y;
+}
+/* line 4, ../../app/styles/modules/_storyline.scss */
+.storyline a {
+  color: #333;
+  text-decoration: none;
+}
+/* line 9, ../../app/styles/modules/_storyline.scss */
+.storyline .year {
+  display: block;
+  background: white;
+  width: 80px;
+  padding: 8px;
+  margin: 8px 0 8px 16px;
+  text-align: center;
+}
+/* line 21, ../../app/components/sass-bootstrap/lib/_mixins.scss */
+.storyline .story:before, .storyline .story:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */
+}
+/* line 25, ../../app/components/sass-bootstrap/lib/_mixins.scss */
+.storyline .story:after {
+  clear: both;
+}
+/* line 22, ../../app/styles/modules/_storyline.scss */
+.storyline .date {
+  float: left;
+  font-size: 1em;
+  width: 80px;
+  height: 80px;
+  padding: 16px 20px 20px;
+  margin: 24px 15px;
+  text-align: center;
+  background: white;
+  border-radius: 45px;
+  border: 1px solid white;
+}
+/* line 34, ../../app/styles/modules/_storyline.scss */
+.storyline .day {
+  display: block;
+  font-size: 2.25em;
+  line-height: 1em;
+}
+/* line 39, ../../app/styles/modules/_storyline.scss */
+.storyline .month {
+  display: block;
+}
+/* line 42, ../../app/styles/modules/_storyline.scss */
+.storyline .title {
+  margin: 32px 0 0 120px;
+  padding: 16px;
+  background: white;
+}
+
+/* line 12, ../../app/styles/app.scss */
 body {
   margin: 24px 0;
 }

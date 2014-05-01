@@ -44,14 +44,14 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
 this["JST"]["app/template/storyline.hbs"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
   this.compilerInfo = [4,'>= 1.0.0'];
 helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
-  var buffer = "", stack1, functionType="function", escapeExpression=this.escapeExpression, self=this;
+  var buffer = "", stack1, functionType="function", escapeExpression=this.escapeExpression, helperMissing=helpers.helperMissing, self=this;
 
 function program1(depth0,data) {
   
   var buffer = "", stack1;
-  buffer += "\n        <div class=\"year\">\n            "
+  buffer += "\n        <div class=\"year-group\">\n            <div class=\"year\">"
     + escapeExpression(((stack1 = (data == null || data === false ? data : data.key)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
-    + "\n            ";
+    + "</div>\n            ";
   stack1 = helpers.each.call(depth0, depth0, {hash:{},inverse:self.noop,fn:self.program(2, program2, data),data:data});
   if(stack1 || stack1 === 0) { buffer += stack1; }
   buffer += "\n        </div>\n    ";
@@ -59,12 +59,14 @@ function program1(depth0,data) {
   }
 function program2(depth0,data) {
   
-  var buffer = "", stack1;
+  var buffer = "", stack1, helper, options;
   buffer += "\n                <div class=\"story\">\n                    <a href=\"#\" data-id=\""
     + escapeExpression(((stack1 = (depth0 && depth0.uri)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
-    + "\">\n                        <div class=\"date\">\n                            "
-    + escapeExpression(((stack1 = (depth0 && depth0.startDate)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
-    + "\n                        </div>\n                        <div class=\"content\">\n                            "
+    + "\">\n                        <div class=\"date\">\n                            <span class=\"day\">"
+    + escapeExpression((helper = helpers.day || (depth0 && depth0.day),options={hash:{},data:data},helper ? helper.call(depth0, (depth0 && depth0.startDate), options) : helperMissing.call(depth0, "day", (depth0 && depth0.startDate), options)))
+    + "</span>\n                            <span class=\"month\">"
+    + escapeExpression((helper = helpers.month || (depth0 && depth0.month),options={hash:{},data:data},helper ? helper.call(depth0, (depth0 && depth0.startDate), options) : helperMissing.call(depth0, "month", (depth0 && depth0.startDate), options)))
+    + "</span>\n                        </div>\n                        <div class=\"title\">\n                            "
     + escapeExpression(((stack1 = (depth0 && depth0.title)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
     + "\n                        </div>\n                    </a>\n                </div>\n            ";
   return buffer;
@@ -81,12 +83,14 @@ function program4(depth0,data) {
   }
 function program5(depth0,data) {
   
-  var buffer = "", stack1;
+  var buffer = "", stack1, helper, options;
   buffer += "\n            <div class=\"story\">\n                <a href=\"#\" data-id=\""
     + escapeExpression(((stack1 = (depth0 && depth0.uri)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
-    + "\">\n                    <div class=\"date\">\n                        "
-    + escapeExpression(((stack1 = (depth0 && depth0.startDate)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
-    + "\n                    </div>\n                    <div class=\"content\">\n                        "
+    + "\">\n                    <div class=\"date\">\n                        <span class=\"day\">"
+    + escapeExpression((helper = helpers.day || (depth0 && depth0.day),options={hash:{},data:data},helper ? helper.call(depth0, (depth0 && depth0.startDate), options) : helperMissing.call(depth0, "day", (depth0 && depth0.startDate), options)))
+    + "</span>\n                        <span class=\"month\">"
+    + escapeExpression((helper = helpers.month || (depth0 && depth0.month),options={hash:{},data:data},helper ? helper.call(depth0, (depth0 && depth0.startDate), options) : helperMissing.call(depth0, "month", (depth0 && depth0.startDate), options)))
+    + "</span>\n                    </div>\n                    <div class=\"content\">\n                        "
     + escapeExpression(((stack1 = (depth0 && depth0.title)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
     + "\n                    </div>\n                </a>\n            </div>\n        ";
   return buffer;
@@ -133,7 +137,7 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
 function program1(depth0,data) {
   
   var buffer = "", stack1;
-  buffer += "\n        <li><a href=\"#\" data-id=\""
+  buffer += "\n        <li><a class=\"topic\" href=\"#\" data-id=\""
     + escapeExpression(((stack1 = (depth0 && depth0.uri)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
     + "\">"
     + escapeExpression(((stack1 = (depth0 && depth0.preferredLabel)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
@@ -141,7 +145,7 @@ function program1(depth0,data) {
   return buffer;
   }
 
-  buffer += "<ul class=\"topics\">\n    ";
+  buffer += "<ul class=\"topics-list\">\n    ";
   stack1 = helpers.each.call(depth0, (depth0 && depth0.topics), {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data});
   if(stack1 || stack1 === 0) { buffer += stack1; }
   buffer += "\n</ul>";

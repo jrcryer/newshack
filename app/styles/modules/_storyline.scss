@@ -1,0 +1,48 @@
+.storyline {
+    background: url(/img/storyline.png) repeat-y;
+
+    a {
+        color: #333;
+        text-decoration: none;
+    }
+
+    .year {
+        display: block;
+        background: $white;
+        width: 80px;
+        padding: 8px;
+        margin: 8px 0 8px 16px;
+        text-align: center;
+    }
+
+    .story {
+        @include clearfix;
+    }
+
+    .date {
+        float: left;
+        font-size: 1em;
+        width: 80px;
+        height: 80px;
+        padding: 16px 20px 20px;
+        margin: 24px 15px;
+        text-align: center;
+        background: $white;
+        border-radius: 45px;
+        border: 1px solid $white;
+    }
+    .day {
+        display: block;
+        font-size: 2.25em;
+        line-height: 1em;
+    }
+    .month {
+        display: block;
+    }
+    .title {
+        margin: 32px 0 0 120px;
+        padding: 16px;
+        background: $white;
+    }
+
+}

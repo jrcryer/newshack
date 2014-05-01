@@ -5,7 +5,8 @@
     "jquery": "~2.1.0",
     "sass-bootstrap": "~3.0.0",
     "modernizr": "latest",
-    "requirejs": "~2.1.11"
+    "requirejs": "~2.1.11",
+    "momentjs": "~2.6.0"
   },
   "exportsOverride": {
     "bootstrap": {

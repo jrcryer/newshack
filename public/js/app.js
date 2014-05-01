@@ -5,6 +5,7 @@ require.config({
   paths: {
     jquery: '/lib/jquery/dist/jquery',
     handlebars: '/lib/handlebars/handlebars',
+    moment: '/lib/momentjs/moment',
     underscore: '/lib/underscore/underscore',
     backbone: '/lib/backbone/backbone'
   },
@@ -20,6 +21,10 @@ require.config({
 
     handlebars: {
       exports: 'Handlebars'
+    },
+
+    moment: {
+      exports: 'moment'
     }
   }
 });

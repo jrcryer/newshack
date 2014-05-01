@@ -1,0 +1,20 @@
+.topics-list {
+    margin: 0 108px 8px;
+    padding: 0;
+    list-style: none;
+    @include clearfix;
+
+    .topic {
+        float: left;
+        display: block;
+        padding: 8px 8px 8px 18px;
+        background: $topics url(/img/dots.png) 5px 5px no-repeat;
+        margin: 0 8px 0 8px;
+        text-decoration: none;
+        color: $white;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}

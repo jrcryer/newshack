@@ -5,9 +5,18 @@ define([
   'underscore',
   'backbone',
   'handlebars',
+  'moment',
   'collection/storyline',
   'views'
-], function($, _, Backbone, Handlebars, Store, Views) {
+], function($, _, Backbone, Handlebars, moment, Store, Views) {
+
+  Handlebars.registerHelper('day', function(context, block) {
+    return moment(new Date(context)).format('DD');
+  });
+
+  Handlebars.registerHelper('month', function(context, block) {
+    return moment(new Date(context)).format('MMM');
+  });
 
   return {
     initialize: function() {
