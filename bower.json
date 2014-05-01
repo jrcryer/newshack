@@ -1,16 +1,16 @@
 {
-    "name": "newhack",
-    "version": "0.0.1",
-    "dependencies": {
-        "jquery": "latest",
-        "sass-bootstrap": "~3.0.0",
-        "modernizr": "latest"
-    },
-    "exportsOverride": {
-        "bootstrap": {
-            "css": "docs/assets/css/bootstrap*.css",
-            "js": "docs/assets/js/bootstrap.js",
-            "img": "docs/assets/img/glyphicons-halflings*.png"
-        }
+  "name": "newhack",
+  "version": "0.0.1",
+  "dependencies": {
+    "jquery": "~2.1.0",
+    "sass-bootstrap": "~3.0.0",
+    "modernizr": "latest"
+  },
+  "exportsOverride": {
+    "bootstrap": {
+      "css": "docs/assets/css/bootstrap*.css",
+      "js": "docs/assets/js/bootstrap.js",
+      "img": "docs/assets/img/glyphicons-halflings*.png"
     }
+  }
 }

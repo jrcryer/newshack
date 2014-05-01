@@ -13,11 +13,10 @@ var express        = require('express'),
     compression    = require('compression'),
     methodOverride = require('method-override'),
     favicon        = require('static-favicon'),
-    //MongoStore     = require('connect-mongo')({session: session}),
     flash          = require('connect-flash'),
     config         = require('./config');
 
-module.exports = function(app, db) {
+module.exports = function(app) {
     app.set('showStackError', true);
 
     // Prettify HTML
@@ -56,15 +55,6 @@ module.exports = function(app, db) {
     app.use(bodyParser.urlencoded());
     app.use(bodyParser.json());
     app.use(methodOverride());
-
-    // Express/Mongo session storage
-    // app.use(session({
-    //     secret: config.sessionSecret,
-    //     store: new MongoStore({
-    //         db: db.connection.db,
-    //         collection: config.sessionCollection
-    //     })
-    // }));
 
     // Dynamic helpers
     app.use(helpers(config.app.name));

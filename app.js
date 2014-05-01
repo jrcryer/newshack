@@ -5,7 +5,6 @@
  */
 var express = require('express'),
     fs = require('fs');
-    //mongoose = require('mongoose');
 
 /**
  * Main application entry file.
@@ -14,7 +13,6 @@ var express = require('express'),
 
 // Initializing system variables
 var config = require('./config/config');
-var db     = undefined; //mongoose.connect(config.db);
 
 //Bootstrap models
 // var models_path = __dirname + '/app/models';
@@ -36,7 +34,7 @@ var db     = undefined; //mongoose.connect(config.db);
 var app = express();
 
 //express settings
-require('./config/express')(app, db);
+require('./config/express')(app);
 
 //Bootstrap routes
 require('./config/routes')(app);

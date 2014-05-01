@@ -99,15 +99,25 @@ module.exports = function(grunt) {
                 reporter: 'spec'
             },
             src: ['test/**/*.js']
+        },
+        bowerInstall: {
+
+          build: {
+            src: [
+              'app/views/**/*.hbs'
+            ],
+
+            // Optional:
+            // ---------
+            cwd: '',
+            dependencies: true,
+            devDependencies: false,
+            exclude: [],
+            fileTypes: {},
+            ignorePath: ''
+          }
         }
     });
-
-    //Load NPM tasks
-    grunt.loadNpmTasks('grunt-contrib-watch');
-    grunt.loadNpmTasks('grunt-contrib-jshint');
-    grunt.loadNpmTasks('grunt-mocha-test');
-    grunt.loadNpmTasks('grunt-nodemon');
-    grunt.loadNpmTasks('grunt-concurrent');
 
     //Making grunt default to force in order not to break the project.
     grunt.option('force', true);
@@ -116,7 +126,7 @@ module.exports = function(grunt) {
     grunt.registerTask('default', ['jshint', 'compass', 'concurrent']);
 
     // Default task(s).
-    grunt.registerTask('build', ['jshint', 'compass', 'concurrent']);
+    grunt.registerTask('build', ['jshint', 'compass', 'bowerInstall']);
 
     //Test task.
     grunt.registerTask('test', ['mochaTest']);
