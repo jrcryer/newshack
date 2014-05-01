@@ -1,7 +1,12 @@
 'use strict';
 
-define(['underscore', 'backbone', 'model/story'], function(_, Backbone, Story) {
-  return Backbone.Collection.extend({
-    model: Story
-  });
+define(['jquery'], function($) {
+
+  var url = '/story/';
+
+  return {
+    get: function(story, success, error) {
+      $.get(url + story, success, error);
+    }
+  };
 });
