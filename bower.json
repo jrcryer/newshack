@@ -12,5 +12,8 @@
       "js": "docs/assets/js/bootstrap.js",
       "img": "docs/assets/img/glyphicons-halflings*.png"
     }
+  },
+  "devDependencies": {
+    "backbone": "~1.1.2"
   }
 }
