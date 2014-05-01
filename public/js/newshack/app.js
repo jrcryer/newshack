@@ -1,10 +1,15 @@
+'use strict';
+
 define([
-  // These are path alias that we configured in our bootstrap
-  'jquery',     // lib/jquery/jquery
-  'underscore', // lib/underscore/underscore
-  'backbone'    // lib/backbone/backbone
-], function($, _, Backbone){
+  'jquery',
+  'underscore',
+  'backbone',
+  'view/storyline',
+], function($, _, Backbone, Storyline){
+
   return {
-    initialize: function() {}
-  }
+    initialize: function() {
+
+    }
+  };
 });
