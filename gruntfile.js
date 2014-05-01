@@ -25,14 +25,15 @@ module.exports = function(grunt) {
                 },
             },
             js: {
-                files: ['public/js/**', 'app/**/*.js'],
+                files: ['public/js/**', 'app/**/*.js', '!public/js/newshack/template.js'],
                 tasks: ['jshint'],
                 options: {
                     livereload: true,
                 },
             },
             html: {
-                files: ['public/views/**'],
+                files: ['public/views/**', 'app/template/**'],
+                tasks: ['handlebars'],
                 options: {
                     livereload: true,
                 },
