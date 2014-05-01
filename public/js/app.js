@@ -1,7 +1,7 @@
 'use strict';
 
 require.config({
-  baseUrl: 'js/newshack',
+  baseUrl: '/js/newshack',
   paths: {
     jquery: '/lib/jquery/dist/jquery',
     handlebars: '/lib/handlebars/handlebars',

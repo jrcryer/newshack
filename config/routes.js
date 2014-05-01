@@ -6,7 +6,7 @@ module.exports = function(app) {
   app.get('/', index.render);
 
   var widget = require('../app/controllers/widget');
-  app.get('/widget', widget.render);
+  app.get('/widget/:id', widget.render);
 
   var story = require('../app/controllers/story');
   app.get('/story/:id', story.render);

@@ -1,8 +1,8 @@
 <div class="storyline">
-    {{#each year}}
+    {{#each years}}
         <div class="year">
-            {{this.label}}
-            {{#each this.events}}
+            {{@key}}
+            {{#each this}}
                 <div class="story">
                     <a href="#" data-id="{{this.uri}}">
                         <div class="date">

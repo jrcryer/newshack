@@ -11,12 +11,17 @@ define([
 
   return {
     initialize: function() {
-      Store.get('sample', function(data) {
-        new Views.Header(data).render();
-        new Views.Title(data.storyline).render();
-        new Views.Topics(data.storyline.topics).render();
-        new Views.Storyline(data.storyline).render();
+      $(function() {
+        var story = $('#widget').data('story');
+        console.log('Loading story' + story);
+        Store.get(story, function(data) {
+          new Views.Header(data).render();
+          new Views.Title(data.storyline).render();
+          new Views.Topics(data.storyline.topics).render();
+          new Views.Storyline(data.storyline).render();
+        });
       });
+
     }
   };
 });

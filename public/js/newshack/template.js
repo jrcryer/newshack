@@ -51,9 +51,9 @@ function program1(depth0,data) {
   
   var buffer = "", stack1;
   buffer += "\n        <div class=\"year\">\n            "
-    + escapeExpression(((stack1 = (depth0 && depth0.label)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + escapeExpression(((stack1 = (data == null || data === false ? data : data.key)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
     + "\n            ";
-  stack1 = helpers.each.call(depth0, (depth0 && depth0.events), {hash:{},inverse:self.noop,fn:self.program(2, program2, data),data:data});
+  stack1 = helpers.each.call(depth0, depth0, {hash:{},inverse:self.noop,fn:self.program(2, program2, data),data:data});
   if(stack1 || stack1 === 0) { buffer += stack1; }
   buffer += "\n        </div>\n    ";
   return buffer;
@@ -94,7 +94,7 @@ function program5(depth0,data) {
   }
 
   buffer += "<div class=\"storyline\">\n    ";
-  stack1 = helpers.each.call(depth0, (depth0 && depth0.year), {hash:{},inverse:self.program(4, program4, data),fn:self.program(1, program1, data),data:data});
+  stack1 = helpers.each.call(depth0, (depth0 && depth0.years), {hash:{},inverse:self.program(4, program4, data),fn:self.program(1, program1, data),data:data});
   if(stack1 || stack1 === 0) { buffer += stack1; }
   buffer += "\n</div>";
   return buffer;
