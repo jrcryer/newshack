@@ -90,7 +90,7 @@ function program5(depth0,data) {
     + escapeExpression((helper = helpers.day || (depth0 && depth0.day),options={hash:{},data:data},helper ? helper.call(depth0, (depth0 && depth0.startDate), options) : helperMissing.call(depth0, "day", (depth0 && depth0.startDate), options)))
     + "</span>\n                        <span class=\"month\">"
     + escapeExpression((helper = helpers.month || (depth0 && depth0.month),options={hash:{},data:data},helper ? helper.call(depth0, (depth0 && depth0.startDate), options) : helperMissing.call(depth0, "month", (depth0 && depth0.startDate), options)))
-    + "</span>\n                    </div>\n                    <div class=\"content\">\n                        "
+    + "</span>\n                    </div>\n                    <div class=\"title\">\n                        "
     + escapeExpression(((stack1 = (depth0 && depth0.title)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
     + "\n                    </div>\n                </a>\n            </div>\n        ";
   return buffer;
@@ -99,7 +99,7 @@ function program5(depth0,data) {
   buffer += "<div class=\"storyline\">\n    ";
   stack1 = helpers.each.call(depth0, (depth0 && depth0.years), {hash:{},inverse:self.program(4, program4, data),fn:self.program(1, program1, data),data:data});
   if(stack1 || stack1 === 0) { buffer += stack1; }
-  buffer += "\n</div>";
+  buffer += "\n</div>\n";
   return buffer;
   });
 
