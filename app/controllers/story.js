@@ -5,12 +5,11 @@ var serivceUrl = 'http://newshack-api.herokuapp.com/api/';
 
 exports.render = function(req, res) {
 
-  var url = serivceUrl + req.params.id;
+  var url = serivceUrl + req.params.id + '.json';
 
   request.get(url, function (error, response, body) {
     if (!error && response.statusCode === 200) {
-      console.log(body);
-      res.send('hello');
+      res.send(JSON.parse(body));
     } else {
       res.send('{}');
     }

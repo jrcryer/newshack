@@ -50,6 +50,7 @@
     "grunt-mocha-test": "latest",
     "load-grunt-tasks": "~0.1.0",
     "time-grunt": "~0.1.1",
-    "grunt-bower-install": "^1.4.1"
+    "grunt-bower-install": "^1.4.1",
+    "grunt-contrib-handlebars": "^0.8.0"
   }
 }

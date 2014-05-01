@@ -53,6 +53,17 @@ module.exports = function(grunt) {
                 }
             }
         },
+        handlebars: {
+            compile: {
+                options: {
+                    namespace: 'JST',
+                    amd: true
+                },
+                files: {
+                    'public/js/newshack/template.js': ['app/template/**/*.hbs']
+                }
+            }
+        },
         nodemon: {
             dev: {
                 script: 'app.js',
@@ -113,10 +124,10 @@ module.exports = function(grunt) {
     grunt.option('force', true);
 
     //Default task(s).
-    grunt.registerTask('default', ['jshint', 'compass', 'concurrent']);
+    grunt.registerTask('default', ['jshint', 'handlebars', 'compass', 'concurrent']);
 
     // Default task(s).
-    grunt.registerTask('build', ['jshint', 'compass', 'bowerInstall']);
+    grunt.registerTask('build', ['jshint', 'handlebars', 'compass', 'bowerInstall']);
 
     //Test task.
     grunt.registerTask('test', ['mochaTest']);

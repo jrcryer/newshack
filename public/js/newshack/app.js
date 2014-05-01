@@ -4,16 +4,15 @@ define([
   'jquery',
   'underscore',
   'backbone',
+  'handlebars',
   'collection/storyline',
   'view/storyline',
-], function($, _, Backbone, Store, Storyline){
+], function($, _, Backbone, Handlebars, Store, Storyline){
 
   return {
     initialize: function() {
       Store.get('sample', function(storyline) {
-        new Storyline(storyline).render();
-      }, function() {
-        console.log('failed request');
+        new Storyline(Handlebars, storyline).render();
       });
     }
   };
