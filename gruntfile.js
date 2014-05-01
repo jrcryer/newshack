@@ -101,20 +101,10 @@ module.exports = function(grunt) {
             src: ['test/**/*.js']
         },
         bowerInstall: {
-
           build: {
             src: [
               'app/views/**/*.hbs'
-            ],
-
-            // Optional:
-            // ---------
-            cwd: '',
-            dependencies: true,
-            devDependencies: false,
-            exclude: [],
-            fileTypes: {},
-            ignorePath: ''
+            ]
           }
         }
     });

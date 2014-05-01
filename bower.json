@@ -4,7 +4,8 @@
   "dependencies": {
     "jquery": "~2.1.0",
     "sass-bootstrap": "~3.0.0",
-    "modernizr": "latest"
+    "modernizr": "latest",
+    "requirejs": "~2.1.11"
   },
   "exportsOverride": {
     "bootstrap": {
