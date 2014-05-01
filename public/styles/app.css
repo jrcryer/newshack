@@ -7644,6 +7644,7 @@ td.visible-print {
   padding: 8px;
   background: #cecece;
   height: 100%;
+  overflow: scroll;
 }
 
 /* line 1, ../../app/styles/modules/_header.scss */
