@@ -42,14 +42,14 @@ define(['jquery', 'underscore', 'backbone', 'template'], function($, _, Backbone
 
     renderMultipleEvents: function(data) {
       var years = _.map(data, function(event) {
-        return new Date(event.startDate).getFullYear();
+        return new Date(event.eventStartDate).getFullYear();
       });
 
       if (years.length === 1) {
         return this.renderEvents(data);
       }
       years = _.groupBy(data, function(event) {
-        return new Date(event.startDate).getFullYear();
+        return new Date(event.eventStartDate).getFullYear();
       });
       this.$el.html(
         this.template({years: years})

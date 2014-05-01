@@ -63,11 +63,11 @@ function program2(depth0,data) {
   buffer += "\n                <div class=\"story\" data-id=\""
     + escapeExpression(((stack1 = (depth0 && depth0.id)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
     + "\">\n                    <a href=\"#\">\n                        <div class=\"date\">\n                            <span class=\"day\">"
-    + escapeExpression((helper = helpers.day || (depth0 && depth0.day),options={hash:{},data:data},helper ? helper.call(depth0, (depth0 && depth0.startDate), options) : helperMissing.call(depth0, "day", (depth0 && depth0.startDate), options)))
+    + escapeExpression((helper = helpers.day || (depth0 && depth0.day),options={hash:{},data:data},helper ? helper.call(depth0, (depth0 && depth0.eventStartDate), options) : helperMissing.call(depth0, "day", (depth0 && depth0.eventStartDate), options)))
     + "</span>\n                            <span class=\"month\">"
-    + escapeExpression((helper = helpers.month || (depth0 && depth0.month),options={hash:{},data:data},helper ? helper.call(depth0, (depth0 && depth0.startDate), options) : helperMissing.call(depth0, "month", (depth0 && depth0.startDate), options)))
+    + escapeExpression((helper = helpers.month || (depth0 && depth0.month),options={hash:{},data:data},helper ? helper.call(depth0, (depth0 && depth0.eventStartDate), options) : helperMissing.call(depth0, "month", (depth0 && depth0.eventStartDate), options)))
     + "</span>\n                        </div>\n                        <div class=\"title\">\n                            "
-    + escapeExpression(((stack1 = (depth0 && depth0.title)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + escapeExpression(((stack1 = (depth0 && depth0.preferredLabel)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
     + "\n                        </div>\n                    </a>\n                </div>\n            ";
   return buffer;
   }
@@ -87,11 +87,11 @@ function program5(depth0,data) {
   buffer += "\n            <div class=\"story\" data-id=\""
     + escapeExpression(((stack1 = (depth0 && depth0.id)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
     + "\">\n                <a href=\"#\">\n                    <div class=\"date\">\n                        <span class=\"day\">"
-    + escapeExpression((helper = helpers.day || (depth0 && depth0.day),options={hash:{},data:data},helper ? helper.call(depth0, (depth0 && depth0.startDate), options) : helperMissing.call(depth0, "day", (depth0 && depth0.startDate), options)))
+    + escapeExpression((helper = helpers.day || (depth0 && depth0.day),options={hash:{},data:data},helper ? helper.call(depth0, (depth0 && depth0.eventStartDate), options) : helperMissing.call(depth0, "day", (depth0 && depth0.eventStartDate), options)))
     + "</span>\n                        <span class=\"month\">"
-    + escapeExpression((helper = helpers.month || (depth0 && depth0.month),options={hash:{},data:data},helper ? helper.call(depth0, (depth0 && depth0.startDate), options) : helperMissing.call(depth0, "month", (depth0 && depth0.startDate), options)))
+    + escapeExpression((helper = helpers.month || (depth0 && depth0.month),options={hash:{},data:data},helper ? helper.call(depth0, (depth0 && depth0.eventStartDate), options) : helperMissing.call(depth0, "month", (depth0 && depth0.eventStartDate), options)))
     + "</span>\n                    </div>\n                    <div class=\"title\">\n                        "
-    + escapeExpression(((stack1 = (depth0 && depth0.title)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + escapeExpression(((stack1 = (depth0 && depth0.preferredLabel)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
     + "\n                    </div>\n                </a>\n            </div>\n        ";
   return buffer;
   }

@@ -1,6 +1,10 @@
 .widget {
     width: 480px;
     border: 1px solid #E1E1E1;
+
+    &.small {
+        width: 320px;
+    }
 }
 
 .content {

@@ -7634,8 +7634,12 @@ td.visible-print {
   width: 480px;
   border: 1px solid #E1E1E1;
 }
+/* line 5, ../../app/styles/modules/_layout.scss */
+.widget.small {
+  width: 320px;
+}
 
-/* line 6, ../../app/styles/modules/_layout.scss */
+/* line 10, ../../app/styles/modules/_layout.scss */
 .content {
   padding: 8px;
   background: #cecece;
@@ -7666,6 +7670,10 @@ td.visible-print {
 .title h1 {
   margin: 0 108px;
   font-size: 1.5em;
+}
+/* line 22, ../../app/styles/modules/_header.scss */
+.small .title h1 {
+  margin: 0;
 }
 
 /* line 2, ../../app/styles/modules/_button.scss */
@@ -7701,6 +7709,10 @@ td.visible-print {
   clear: both;
 }
 /* line 7, ../../app/styles/modules/_topics.scss */
+.small .topics-list {
+  margin: 0 0 8px;
+}
+/* line 11, ../../app/styles/modules/_topics.scss */
 .topics-list .topic {
   float: left;
   display: block;
@@ -7710,7 +7722,7 @@ td.visible-print {
   text-decoration: none;
   color: white;
 }
-/* line 16, ../../app/styles/modules/_topics.scss */
+/* line 20, ../../app/styles/modules/_topics.scss */
 .topics-list .topic:hover {
   text-decoration: underline;
 }

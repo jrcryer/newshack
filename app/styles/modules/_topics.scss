@@ -4,6 +4,10 @@
     list-style: none;
     @include clearfix;
 
+    .small & {
+        margin: 0 0 8px;
+    }
+
     .topic {
         float: left;
         display: block;

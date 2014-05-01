@@ -6,11 +6,11 @@
                 <div class="story" data-id="{{this.id}}">
                     <a href="#">
                         <div class="date">
-                            <span class="day">{{day this.startDate}}</span>
-                            <span class="month">{{month this.startDate}}</span>
+                            <span class="day">{{day this.eventStartDate}}</span>
+                            <span class="month">{{month this.eventStartDate}}</span>
                         </div>
                         <div class="title">
-                            {{this.title}}
+                            {{this.preferredLabel}}
                         </div>
                     </a>
                 </div>
@@ -21,11 +21,11 @@
             <div class="story" data-id="{{this.id}}">
                 <a href="#">
                     <div class="date">
-                        <span class="day">{{day this.startDate}}</span>
-                        <span class="month">{{month this.startDate}}</span>
+                        <span class="day">{{day this.eventStartDate}}</span>
+                        <span class="month">{{month this.eventStartDate}}</span>
                     </div>
                     <div class="title">
-                        {{this.title}}
+                        {{this.preferredLabel}}
                     </div>
                 </a>
             </div>
