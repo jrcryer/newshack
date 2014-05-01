@@ -16,6 +16,13 @@ define(['jquery', 'backbone', 'template'], function($, Backbone, Template) {
     template: Template['app/template/topics.hbs'],
 
     /**
+     * Event
+     */
+    events: {
+      'click .topic': 'onTopicClick'
+    },
+
+    /**
      * Set the storyline
      */
     initialize: function(topics) {
@@ -27,6 +34,12 @@ define(['jquery', 'backbone', 'template'], function($, Backbone, Template) {
         this.template({topics: this.topics})
       );
       return this;
+    },
+
+    onTopicClick: function(e) {
+      var hash = $(e.currentTarget).data('id');
+      Backbone.trigger('topic:show', {uri: hash});
+      e.preventDefault();
     }
   });
 });

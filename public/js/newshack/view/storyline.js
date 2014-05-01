@@ -16,32 +16,39 @@ define(['jquery', 'underscore', 'backbone', 'template'], function($, _, Backbone
     template: Template['app/template/storyline.hbs'],
 
     /**
+     * Event
+     */
+    events: {
+      'click .story': 'onStoryInteracted'
+    },
+
+    /**
      * Set the storyline
      */
     initialize: function(storyline) {
-      this.storyline = storyline;
+      this.storyline = storyline.storyline;
     },
 
     render: function() {
-      var events = this.storyline.events;
+      var data = this.storyline.events;
 
-      if (events.length > 0) {
-        this.renderMultipleEvents(events);
+      if (data.length > 0) {
+        this.renderMultipleEvents(data);
         return this;
       }
-      this.renderEvents(events);
+      this.renderEvents(data);
       return this;
     },
 
-    renderMultipleEvents: function(events) {
-      var years = _.map(events, function(event) {
+    renderMultipleEvents: function(data) {
+      var years = _.map(data, function(event) {
         return new Date(event.startDate).getFullYear();
       });
 
       if (years.length === 1) {
-        return this.renderEvents(events);
+        return this.renderEvents(data);
       }
-      years = _.groupBy(events, function(event) {
+      years = _.groupBy(data, function(event) {
         return new Date(event.startDate).getFullYear();
       });
       this.$el.html(
@@ -49,10 +56,16 @@ define(['jquery', 'underscore', 'backbone', 'template'], function($, _, Backbone
       );
     },
 
-    renderEvents: function(events) {
+    renderEvents: function(data) {
       this.$el.html(
-        this.template({events: events})
+        this.template({items: data})
       );
+    },
+
+    onStoryInteracted: function(e) {
+      var hash = $(e.currentTarget).data('id');
+      Backbone.trigger('story:show', {uri: hash});
+      e.preventDefault();
     }
   });
 });

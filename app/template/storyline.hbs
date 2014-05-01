@@ -3,8 +3,8 @@
         <div class="year-group">
             <div class="year">{{@key}}</div>
             {{#each this}}
-                <div class="story">
-                    <a href="#" data-id="{{this.uri}}">
+                <div class="story" data-id="{{this.id}}">
+                    <a href="#">
                         <div class="date">
                             <span class="day">{{day this.startDate}}</span>
                             <span class="month">{{month this.startDate}}</span>
@@ -17,9 +17,9 @@
             {{/each}}
         </div>
     {{else}}
-        {{#each events}}
-            <div class="story">
-                <a href="#" data-id="{{this.uri}}">
+        {{#each items}}
+            <div class="story" data-id="{{this.id}}">
+                <a href="#">
                     <div class="date">
                         <span class="day">{{day this.startDate}}</span>
                         <span class="month">{{month this.startDate}}</span>

@@ -60,9 +60,9 @@ function program1(depth0,data) {
 function program2(depth0,data) {
   
   var buffer = "", stack1, helper, options;
-  buffer += "\n                <div class=\"story\">\n                    <a href=\"#\" data-id=\""
-    + escapeExpression(((stack1 = (depth0 && depth0.uri)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
-    + "\">\n                        <div class=\"date\">\n                            <span class=\"day\">"
+  buffer += "\n                <div class=\"story\" data-id=\""
+    + escapeExpression(((stack1 = (depth0 && depth0.id)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "\">\n                    <a href=\"#\">\n                        <div class=\"date\">\n                            <span class=\"day\">"
     + escapeExpression((helper = helpers.day || (depth0 && depth0.day),options={hash:{},data:data},helper ? helper.call(depth0, (depth0 && depth0.startDate), options) : helperMissing.call(depth0, "day", (depth0 && depth0.startDate), options)))
     + "</span>\n                            <span class=\"month\">"
     + escapeExpression((helper = helpers.month || (depth0 && depth0.month),options={hash:{},data:data},helper ? helper.call(depth0, (depth0 && depth0.startDate), options) : helperMissing.call(depth0, "month", (depth0 && depth0.startDate), options)))
@@ -76,7 +76,7 @@ function program4(depth0,data) {
   
   var buffer = "", stack1;
   buffer += "\n        ";
-  stack1 = helpers.each.call(depth0, (depth0 && depth0.events), {hash:{},inverse:self.noop,fn:self.program(5, program5, data),data:data});
+  stack1 = helpers.each.call(depth0, (depth0 && depth0.items), {hash:{},inverse:self.noop,fn:self.program(5, program5, data),data:data});
   if(stack1 || stack1 === 0) { buffer += stack1; }
   buffer += "\n    ";
   return buffer;
@@ -84,9 +84,9 @@ function program4(depth0,data) {
 function program5(depth0,data) {
   
   var buffer = "", stack1, helper, options;
-  buffer += "\n            <div class=\"story\">\n                <a href=\"#\" data-id=\""
-    + escapeExpression(((stack1 = (depth0 && depth0.uri)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
-    + "\">\n                    <div class=\"date\">\n                        <span class=\"day\">"
+  buffer += "\n            <div class=\"story\" data-id=\""
+    + escapeExpression(((stack1 = (depth0 && depth0.id)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
+    + "\">\n                <a href=\"#\">\n                    <div class=\"date\">\n                        <span class=\"day\">"
     + escapeExpression((helper = helpers.day || (depth0 && depth0.day),options={hash:{},data:data},helper ? helper.call(depth0, (depth0 && depth0.startDate), options) : helperMissing.call(depth0, "day", (depth0 && depth0.startDate), options)))
     + "</span>\n                        <span class=\"month\">"
     + escapeExpression((helper = helpers.month || (depth0 && depth0.month),options={hash:{},data:data},helper ? helper.call(depth0, (depth0 && depth0.startDate), options) : helperMissing.call(depth0, "month", (depth0 && depth0.startDate), options)))
