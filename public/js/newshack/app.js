@@ -30,6 +30,7 @@ define([
           var widget = $(this);
           var story  = widget.data('story');
           var isModal = widget.parent().hasClass('stream-modal');
+          var isFull  = widget.hasClass('large');
 
           if (story === undefined) {
             return;
@@ -43,13 +44,18 @@ define([
             new Views.Topics(data.storyline.topics).render();
             Backbone.trigger('storyline:show', {showKeyEventsOnly: isModal});
 
-            var header = $('.header', widget).height();
-            var title  = $('.title', widget).height();
-            var topics = $('.topics', widget).height();
-            var totalHeight = isModal ? 320 : 480;
-            var height = (totalHeight - (header + title + topics)) + 'px';
-            $('.content', widget).height(height);
-            $('.slide', widget).height(height);
+            if (!isFull) {
+              var header = $('.header', widget).height();
+              var title  = $('.title', widget).height();
+              var topics = $('.topics', widget).height();
+              var totalHeight = isModal ? 320 : 480;
+              var height = (totalHeight - (header + title + topics)) + 'px';
+              $('.content', widget).height(height);
+              $('.slide', widget).height(height);
+
+            } else {
+              new Views.Articles(data.storyline).render();
+            }
           });
         });
       });

@@ -1,0 +1,23 @@
+<div class="synopsis">
+    {{summary}}
+
+    <h2>Key articles</h2>
+    {{#each articles}}
+    <div class="article">
+        <div class="desc">
+            <a href="#">{{this.title}}</a>
+        </div>
+    </div>
+{{/each}}
+</div>
+<div class="articles">
+    <div class="feature-article">
+        <div class="thumb">
+            <img src="http://ichef.bbci.co.uk/news/625/media/images/74468000/jpg/_74468762_74468752.jpg" />
+        </div>
+        <h2>{{first.title}}</h2>
+        <div class="desc">
+            {{first.description}}
+        </div>
+    </div>
+</div>

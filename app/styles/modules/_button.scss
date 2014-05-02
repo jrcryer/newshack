@@ -42,8 +42,13 @@
 
     .header-group & {
         position: absolute;
-        top: 0  ;
+        top: 0;
         left: 8px;
+
+        .large & {
+            top: auto;
+            bottom: 0;
+        }
     }
 }
 

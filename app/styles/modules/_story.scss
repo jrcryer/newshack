@@ -39,3 +39,29 @@
         margin: 8px 0;
     }
 }
+
+.news-articles {
+    .synopsis {
+        float: left;
+        width: 32%;
+    }
+    .articles {
+        float: right;
+        width: 65%;
+    }
+    .articles-below {
+        clear: both;
+
+        .article {
+            float: left;
+            width: 31%;
+            margin-right: 1%;
+
+            img {
+                width: 150px;
+            }
+        }
+    }
+
+
+}

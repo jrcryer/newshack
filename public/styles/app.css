@@ -7675,18 +7675,34 @@ td.visible-print {
   transform: translateX(-66.33333%);
 }
 
-/* line 44, ../../app/styles/modules/_layout.scss */
+/* line 45, ../../app/styles/modules/_layout.scss */
 .large .content.forward {
-  -webkit-transform: translateX(-66.5%);
-  transform: translateX(-66.5%);
+  -webkit-transform: translateX(-33.5%);
+  transform: translateX(-33.5%);
+}
+/* line 50, ../../app/styles/modules/_layout.scss */
+.large .content {
+  -webkit-transform: translateX(0%);
+  transform: translateX(0%);
+}
+/* line 21, ../../app/components/sass-bootstrap/lib/_mixins.scss */
+.large .content:before, .large .content:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */
+}
+/* line 25, ../../app/components/sass-bootstrap/lib/_mixins.scss */
+.large .content:after {
+  clear: both;
 }
 
-/* line 50, ../../app/styles/modules/_layout.scss */
+/* line 58, ../../app/styles/modules/_layout.scss */
 .stream-time {
   font-size: 18px;
 }
 
-/* line 54, ../../app/styles/modules/_layout.scss */
+/* line 62, ../../app/styles/modules/_layout.scss */
 .slide {
   float: left;
   padding: 0 8px;
@@ -7787,8 +7803,13 @@ td.visible-print {
   top: 0;
   left: 8px;
 }
+/* line 48, ../../app/styles/modules/_button.scss */
+.large .header-group .btn-back {
+  top: auto;
+  bottom: 0;
+}
 
-/* line 51, ../../app/styles/modules/_button.scss */
+/* line 56, ../../app/styles/modules/_button.scss */
 .large .navigation {
   display: inline-block;
 }
@@ -7867,6 +7888,31 @@ td.visible-print {
 /* line 38, ../../app/styles/modules/_story.scss */
 .article img {
   margin: 8px 0;
+}
+
+/* line 44, ../../app/styles/modules/_story.scss */
+.news-articles .synopsis {
+  float: left;
+  width: 32%;
+}
+/* line 48, ../../app/styles/modules/_story.scss */
+.news-articles .articles {
+  float: right;
+  width: 65%;
+}
+/* line 52, ../../app/styles/modules/_story.scss */
+.news-articles .articles-below {
+  clear: both;
+}
+/* line 55, ../../app/styles/modules/_story.scss */
+.news-articles .articles-below .article {
+  float: left;
+  width: 31%;
+  margin-right: 1%;
+}
+/* line 60, ../../app/styles/modules/_story.scss */
+.news-articles .articles-below .article img {
+  width: 150px;
 }
 
 /* line 1, ../../app/styles/modules/_storyline.scss */

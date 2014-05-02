@@ -41,10 +41,18 @@
 }
 
 .large {
+
     .content.forward {
-        -webkit-transform: translateX(-66.5%);
-        transform: translateX(-66.5%);
+        -webkit-transform: translateX(-33.5%);
+        transform: translateX(-33.5%);
     }
+
+    .content {
+        @include clearfix;
+        -webkit-transform: translateX(0%);
+        transform: translateX(0%);
+    }
+
 }
 
 .stream-time {

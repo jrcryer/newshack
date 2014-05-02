@@ -1,6 +1,7 @@
 'use strict';
 
 define([
+  'view/articles',
   'view/header',
   'view/navigation',
   'view/story',
@@ -8,8 +9,9 @@ define([
   'view/title',
   'view/topic',
   'view/topics'
-], function(Header, Navigation, Story, Storyline, Title, Topic, Topics) {
+], function(Articles, Header, Navigation, Story, Storyline, Title, Topic, Topics) {
   return {
+    Articles: Articles,
     Header: Header,
     Navigation: Navigation,
     Story: Story,
