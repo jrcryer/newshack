@@ -37,8 +37,8 @@ define(['jquery', 'backbone', 'template'], function($, Backbone, Template) {
     },
 
     onTopicClick: function(e) {
-      var hash = $(e.currentTarget).data('id');
-      Backbone.trigger('topic:show', {uri: hash});
+      var uri = $(e.currentTarget).data('id');
+      Backbone.trigger('topic:show', uri);
       e.preventDefault();
     }
   });

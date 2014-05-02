@@ -7633,18 +7633,38 @@ td.visible-print {
 .widget {
   width: 480px;
   border: 1px solid #E1E1E1;
+  overflow: hidden;
 }
-/* line 5, ../../app/styles/modules/_layout.scss */
+/* line 6, ../../app/styles/modules/_layout.scss */
 .widget.small {
   width: 320px;
 }
 
-/* line 10, ../../app/styles/modules/_layout.scss */
+/* line 11, ../../app/styles/modules/_layout.scss */
 .content {
   padding: 8px;
   background: #cecece;
   height: 100%;
-  overflow: scroll;
+  width: 300%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  transition: all 0.8s ease-in-out;
+  transform: translateX(-32.75%);
+}
+/* line 21, ../../app/styles/modules/_layout.scss */
+.content.back {
+  transform: translateX(0%);
+}
+/* line 24, ../../app/styles/modules/_layout.scss */
+.content.forward {
+  transform: translateX(-65.5%);
+}
+
+/* line 29, ../../app/styles/modules/_layout.scss */
+.slide {
+  float: left;
+  padding: 0 8px;
+  width: 32.95%;
 }
 
 /* line 1, ../../app/styles/modules/_header.scss */

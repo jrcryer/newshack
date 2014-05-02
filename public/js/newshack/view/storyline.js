@@ -3,8 +3,6 @@
 define(['jquery', 'underscore', 'backbone', 'template'], function($, _, Backbone, Template) {
   return Backbone.View.extend({
 
-    el: '.widget .content',
-
     /**
      * @var data
      */
@@ -33,11 +31,9 @@ define(['jquery', 'underscore', 'backbone', 'template'], function($, _, Backbone
       var data = this.storyline.events;
 
       if (data.length > 0) {
-        this.renderMultipleEvents(data);
-        return this;
+        return this.renderMultipleEvents(data);
       }
-      this.renderEvents(data);
-      return this;
+      return this.renderEvents(data);
     },
 
     renderMultipleEvents: function(data) {
@@ -51,20 +47,20 @@ define(['jquery', 'underscore', 'backbone', 'template'], function($, _, Backbone
       years = _.groupBy(data, function(event) {
         return new Date(event.eventStartDate).getFullYear();
       });
-      this.$el.html(
+      return this.$el.html(
         this.template({years: years})
       );
     },
 
     renderEvents: function(data) {
-      this.$el.html(
+      return this.$el.html(
         this.template({items: data})
       );
     },
 
     onStoryInteracted: function(e) {
-      var hash = $(e.currentTarget).data('id');
-      Backbone.trigger('story:show', {uri: hash});
+      var uri = $(e.currentTarget).data('id');
+      Backbone.trigger('story:show', uri);
       e.preventDefault();
     }
   });

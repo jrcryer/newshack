@@ -3,12 +3,10 @@
 define(['jquery', 'backbone', 'template'], function($, Backbone, Template) {
   return Backbone.View.extend({
 
-    el: '#widget-story',
-
     /**
      * @var data
      */
-    storyline: null,
+    story: null,
 
     /**
      * @var template
@@ -18,15 +16,12 @@ define(['jquery', 'backbone', 'template'], function($, Backbone, Template) {
     /**
      * Set the storyline
      */
-    initialize: function(storyline) {
-      this.storyline = storyline;
+    initialize: function(story) {
+      this.story = story;
     },
 
     render: function() {
-      this.$el.html(
-        this.template({storyline: this.storyline})
-      );
-      return this;
+      return this.template(this.story);
     }
   });
 });

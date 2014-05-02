@@ -19,31 +19,38 @@ define([
     return moment(new Date(context)).format('MMM');
   });
 
-  Mediator.init();
+  Handlebars.registerHelper('date', function(context, block) {
+    return moment(new Date(context)).format('MMM DD YYYY');
+  });
 
   return {
     initialize: function() {
       $(function() {
-        var story = $('.widget').data('story');
+        $('.widget').each(function() {
+          var widget = $(this);
+          var story  = $('.widget').data('story');
 
-        Store.get(story, function(data) {
-          new Views.Header(data).render();
-          new Views.Title(data.storyline).render();
-          new Views.Topics(data.storyline.topics).render();
-          new Views.Storyline(data).render();
+          if (story === undefined) {
+            return;
+          }
 
-          $('.widget').each(function() {
-            var widget = $(this);
+          Store.get(story, function(data) {
+            Mediator.init(widget, data);
+            new Views.Header(data).render();
+            new Views.Title(data.storyline).render();
+            new Views.Navigation().render();
+            new Views.Topics(data.storyline.topics).render();
+            Backbone.trigger('storyline:show');
+
             var header = $('.header', widget).height();
             var title  = $('.title', widget).height();
             var topics = $('.topics', widget).height();
-            var height = header + title + topics;
-            $('.content', widget).height((480 - height) + 'px');
+            var height = (480 - (header + title + topics)) + 'px';
+            $('.content', widget).height(height);
+            $('.slide', widget).height(height);
           });
-
         });
       });
-
     }
   };
 });

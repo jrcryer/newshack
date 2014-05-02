@@ -16,6 +16,11 @@ define(['jquery', 'backbone', 'template'], function($, Backbone, Template) {
     date: null,
 
     /**
+     * @var
+     */
+    navigation: null,
+
+    /**
      * @var template
      */
     template: Template['app/template/title.hbs'],
@@ -26,6 +31,7 @@ define(['jquery', 'backbone', 'template'], function($, Backbone, Template) {
     initialize: function(storyline) {
       this.storyline = storyline;
       Backbone.on('date:change', this.onDateChange, this);
+      Backbone.on('enable-navigation', this.onNavEnabled, this);
     },
 
     render: function() {
