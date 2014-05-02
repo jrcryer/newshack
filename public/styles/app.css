@@ -7938,8 +7938,13 @@ td.visible-print {
   margin: 32px 0 0 120px;
   padding: 16px;
   background: white;
+  text-decoration: underline;
 }
-/* line 59, ../../app/styles/modules/_storyline.scss */
+/* line 60, ../../app/styles/modules/_storyline.scss */
+.storyline .title:hover {
+  text-decoration: none;
+}
+/* line 64, ../../app/styles/modules/_storyline.scss */
 .small .storyline .title {
   margin: 16px 0 0 88px;
 }
