@@ -7,11 +7,12 @@
     .topic {
         float: left;
         display: block;
-        padding: 8px 8px 8px 18px;
-        background: $topics url(/img/dots.png) 5px 5px no-repeat;
-        margin: 0 8px 0 8px;
+        padding: 0 8px 0 16px;
+        background: $topics url(/img/dots.png) 4px 4px no-repeat;
+        margin: 0 4px 0 4px;
         text-decoration: none;
         color: $white;
+        line-height: 24px;
 
         &:hover {
             text-decoration: underline;

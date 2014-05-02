@@ -21,8 +21,14 @@ define([
 
   var showTopic = function(uri) {
     var topic = _.findWhere(storyline.storyline.topics, {id: uri});
-    new Views.Topic(topic).render();
-    Backbone.trigger('enable-navigation');
+
+    Backbone.trigger('push', {
+      prev: storyline,
+      next: topic,
+      title: topic.preferredLabel,
+      type: 'topic',
+      view: new Views.Topic(topic).render()
+    });
   };
 
   var showStoryLine = function() {
@@ -54,7 +60,7 @@ define([
     storyline = data;
 
     Backbone.on('story:show', showStory);
-    Backbone.on('topic:show', showStory);
+    Backbone.on('topic:show', showTopic);
     Backbone.on('storyline:show', showStoryLine);
     Backbone.on('navigate-back', showStoryLineFromPreviousPage);
     Backbone.on('push', forward);

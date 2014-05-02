@@ -7789,33 +7789,34 @@ td.visible-print {
 .topics-list .topic {
   float: left;
   display: block;
-  padding: 8px 8px 8px 18px;
-  background: #b90000 url(/img/dots.png) 5px 5px no-repeat;
-  margin: 0 8px 0 8px;
+  padding: 0 8px 0 16px;
+  background: #b90000 url(/img/dots.png) 4px 4px no-repeat;
+  margin: 0 4px 0 4px;
   text-decoration: none;
   color: white;
+  line-height: 24px;
 }
-/* line 16, ../../app/styles/modules/_topics.scss */
+/* line 17, ../../app/styles/modules/_topics.scss */
 .topics-list .topic:hover {
   text-decoration: underline;
 }
 
 /* line 1, ../../app/styles/modules/_story.scss */
-.story-article {
+.article {
   padding: 8px;
   background: white;
 }
 /* line 5, ../../app/styles/modules/_story.scss */
-.story-article h2 {
+.article h2 {
   font-size: 1.675em;
   margin: 0 0 8px;
 }
 /* line 9, ../../app/styles/modules/_story.scss */
-.story-article .date {
+.article .date {
   color: #b90000;
 }
 /* line 12, ../../app/styles/modules/_story.scss */
-.story-article img {
+.article img {
   margin: 8px 0;
 }
 
