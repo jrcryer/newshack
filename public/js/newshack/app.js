@@ -29,7 +29,7 @@ define([
         $('.widget').each(function() {
           var widget = $(this);
           var story  = widget.data('story');
-          var isModal = widget.parent().hasClass('modal');
+          var isModal = widget.parent().hasClass('stream-modal');
 
           if (story === undefined) {
             return;

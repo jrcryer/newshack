@@ -7633,24 +7633,29 @@ td.visible-print {
 .widget {
   width: 480px;
   border: 1px solid #E1E1E1;
+  background-color: #FFF;
   overflow: hidden;
 }
-/* line 6, ../../app/styles/modules/_layout.scss */
+/* line 7, ../../app/styles/modules/_layout.scss */
 .widget.small {
   width: 320px;
 }
-/* line 10, ../../app/styles/modules/_layout.scss */
+/* line 11, ../../app/styles/modules/_layout.scss */
+.widget.medium {
+  width: 320px;
+}
+/* line 15, ../../app/styles/modules/_layout.scss */
 .widget.large {
   width: auto;
 }
 
-/* line 15, ../../app/styles/modules/_layout.scss */
+/* line 20, ../../app/styles/modules/_layout.scss */
 .header-group {
   position: relative;
   padding: 0 0 0 56px;
 }
 
-/* line 20, ../../app/styles/modules/_layout.scss */
+/* line 25, ../../app/styles/modules/_layout.scss */
 .content {
   padding: 8px;
   background: #cecece;
@@ -7660,23 +7665,23 @@ td.visible-print {
   -webkit-transform: translateX(-33.33333%);
   transform: translateX(-33.33333%);
 }
-/* line 29, ../../app/styles/modules/_layout.scss */
+/* line 34, ../../app/styles/modules/_layout.scss */
 .content.back {
   transform: translateX(0%);
 }
-/* line 32, ../../app/styles/modules/_layout.scss */
+/* line 37, ../../app/styles/modules/_layout.scss */
 .content.forward {
   -webkit-transform: translateX(-66.33333%);
   transform: translateX(-66.33333%);
 }
 
-/* line 39, ../../app/styles/modules/_layout.scss */
+/* line 44, ../../app/styles/modules/_layout.scss */
 .large .content.forward {
   -webkit-transform: translateX(-65.8%);
   transform: translateX(-65.8%);
 }
 
-/* line 45, ../../app/styles/modules/_layout.scss */
+/* line 50, ../../app/styles/modules/_layout.scss */
 .slide {
   float: left;
   padding: 0 8px;

@@ -1,9 +1,14 @@
 .widget {
     width: 480px;
     border: 1px solid #E1E1E1;
+    background-color: #FFF;
     overflow: hidden;
 
     &.small {
+        width: 320px;
+    }
+
+    &.medium {
         width: 320px;
     }
 

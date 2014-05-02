@@ -14,4 +14,5 @@ module.exports = function(app) {
   var preview = require('../app/controllers/preview');
   app.get('/preview/side/:id', preview.side);
   app.get('/preview/full/:id', preview.full);
+  app.get('/preview/stream/:id', preview.stream);
 };
