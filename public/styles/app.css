@@ -7708,14 +7708,23 @@ td.visible-print {
 #preview header {
   padding: 12px 0;
   background-color: #333;
+  margin-bottom: 34px;
 }
+<<<<<<< HEAD
+/* line 31, ../../app/styles/modules/_header.scss */
+=======
 /* line 30, ../../app/styles/modules/_header.scss */
+>>>>>>> 727f9c7735ceba0e9352f2b4924beea5e4d68df1
 #preview header ul {
   margin: 0;
   float: right;
   list-style: none;
 }
+<<<<<<< HEAD
+/* line 36, ../../app/styles/modules/_header.scss */
+=======
 /* line 35, ../../app/styles/modules/_header.scss */
+>>>>>>> 727f9c7735ceba0e9352f2b4924beea5e4d68df1
 #preview header ul li {
   display: inline-block;
   margin-left: 8px;

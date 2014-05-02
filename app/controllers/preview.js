@@ -2,15 +2,17 @@
 
 
 exports.side = function(req, res) {
-  res.render('preview/index', {
+  res.render('preview/side', {
     layout: 'preview',
-    story: req.params.id
+    story: req.params.id,
+    size: 'small'
   });
 };
 
 exports.full = function(req, res) {
-  res.render('preview/index', {
+  res.render('preview/full', {
     layout: 'preview',
-    story: req.params.id
+    story: req.params.id,
+    size: ''
   });
 };
