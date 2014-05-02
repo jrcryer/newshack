@@ -7655,18 +7655,20 @@ td.visible-print {
   overflow-y: scroll;
   overflow-x: hidden;
   transition: all 0.8s ease-in-out;
+  -webkit-transform: translateX(-32.75%);
   transform: translateX(-32.75%);
 }
-/* line 26, ../../app/styles/modules/_layout.scss */
+/* line 27, ../../app/styles/modules/_layout.scss */
 .content.back {
   transform: translateX(0%);
 }
-/* line 29, ../../app/styles/modules/_layout.scss */
+/* line 30, ../../app/styles/modules/_layout.scss */
 .content.forward {
+  -webkit-transform: translateX(-65.5%);
   transform: translateX(-65.5%);
 }
 
-/* line 34, ../../app/styles/modules/_layout.scss */
+/* line 36, ../../app/styles/modules/_layout.scss */
 .slide {
   float: left;
   padding: 0 8px;
@@ -7708,13 +7710,21 @@ td.visible-print {
   background-color: #333;
   margin-bottom: 34px;
 }
+<<<<<<< HEAD
 /* line 31, ../../app/styles/modules/_header.scss */
+=======
+/* line 30, ../../app/styles/modules/_header.scss */
+>>>>>>> 727f9c7735ceba0e9352f2b4924beea5e4d68df1
 #preview header ul {
   margin: 0;
   float: right;
   list-style: none;
 }
+<<<<<<< HEAD
 /* line 36, ../../app/styles/modules/_header.scss */
+=======
+/* line 35, ../../app/styles/modules/_header.scss */
+>>>>>>> 727f9c7735ceba0e9352f2b4924beea5e4d68df1
 #preview header ul li {
   display: inline-block;
   margin-left: 8px;
@@ -7798,6 +7808,20 @@ td.visible-print {
   text-decoration: underline;
 }
 
+/* line 1, ../../app/styles/modules/_story.scss */
+.story-article {
+  background: white;
+}
+/* line 4, ../../app/styles/modules/_story.scss */
+.story-article h2 {
+  font-size: 1.25em;
+  margin: 0 0 8px;
+}
+/* line 8, ../../app/styles/modules/_story.scss */
+.story-article img {
+  margin: 8px 0;
+}
+
 /* line 1, ../../app/styles/modules/_storyline.scss */
 .storyline {
   background: url(/img/storyline.png) repeat-y;
@@ -7873,7 +7897,7 @@ td.visible-print {
   margin: 16px 0 0 88px;
 }
 
-/* line 12, ../../app/styles/app.scss */
+/* line 13, ../../app/styles/app.scss */
 body {
   margin: 24px 0;
 }
