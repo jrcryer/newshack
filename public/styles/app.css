@@ -7660,35 +7660,23 @@ td.visible-print {
   -webkit-transform: translateX(-33.33333%);
   transform: translateX(-33.33333%);
 }
-<<<<<<< HEAD
-/* line 25, ../../app/styles/modules/_layout.scss */
+/* line 29, ../../app/styles/modules/_layout.scss */
 .content.back {
   transform: translateX(0%);
 }
-/* line 28, ../../app/styles/modules/_layout.scss */
-=======
-/* line 31, ../../app/styles/modules/_layout.scss */
-.content.back {
-  transform: translateX(0%);
-}
-/* line 34, ../../app/styles/modules/_layout.scss */
->>>>>>> master
+/* line 32, ../../app/styles/modules/_layout.scss */
 .content.forward {
   -webkit-transform: translateX(-66.33333%);
   transform: translateX(-66.33333%);
 }
 
-<<<<<<< HEAD
-/* line 34, ../../app/styles/modules/_layout.scss */
-=======
-/* line 41, ../../app/styles/modules/_layout.scss */
+/* line 39, ../../app/styles/modules/_layout.scss */
 .large .content.forward {
   -webkit-transform: translateX(-65.8%);
   transform: translateX(-65.8%);
 }
 
-/* line 47, ../../app/styles/modules/_layout.scss */
->>>>>>> master
+/* line 45, ../../app/styles/modules/_layout.scss */
 .slide {
   float: left;
   padding: 0 8px;
