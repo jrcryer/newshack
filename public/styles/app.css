@@ -7943,3 +7943,12 @@ td.visible-print {
 body {
   margin: 24px 0;
 }
+
+/* line 17, ../../app/styles/app.scss */
+.arrow-up {
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 5px solid #CECECE;
+}

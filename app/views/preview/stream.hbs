@@ -5,7 +5,7 @@
           widget.show();
           widget.css({
               position:"absolute",
-              top: evt.pageY,
+              top: evt.pageY + 8,
               left: evt.pageX
           });
           evt.preventDefaults();
@@ -124,5 +124,6 @@
 </div>
 
 <div id="hidden-widget" class="stream-modal">
+    <div class="arrow-up"></div>
     {{> widget }}
 </div>
