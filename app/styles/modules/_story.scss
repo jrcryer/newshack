@@ -9,6 +9,32 @@
     .date {
         color: $topics;
     }
+    .introduction, .main-thumb {
+        img {
+            width: 100%;
+        }
+    }
+    .related {
+        img {
+            float: left;
+            width: 33%;
+            margin-top: 0;
+        }
+        .sub-content {
+            float: right;
+            width: 62%;
+        }
+
+        .large & {
+            img {
+                width: 33%;
+            }
+            .sub-content {
+                float: right;
+                width: 65%;
+            }
+        }
+    }
     img {
         margin: 8px 0;
     }

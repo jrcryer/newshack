@@ -1,10 +1,39 @@
 <div class="story-article article">
     <h2>{{preferredLabel}}</h2>
     <p class="date">{{date eventStartDate}}</p>
+
     {{#if thumbnail}}
-        <img src="{{thumbnail}}" alt="{{ preferredLabel }}" />
+        <div class="main-thumb">
+            <img src="{{thumbnail}}" alt="{{ preferredLabel }}" />
+        </div>
     {{/if}}
     <div class="article-content">
-        Article content
+        <p>Article content</p>
+    </div>
+    <div class="related">
+        <div class="story clearfix">
+            <div class="thumb">
+                <img src="http://ichef.bbci.co.uk/news/235/media/images/74595000/jpg/_74595283_022110683-1.jpg" />
+            </div>
+            <div class="sub-content">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sed tempor urna.</p>
+            </div>
+        </div>
+        <div class="story clearfix">
+            <div class="thumb">
+                <img src="http://ichef.bbci.co.uk/news/235/media/images/74595000/jpg/_74595283_022110683-1.jpg" />
+            </div>
+            <div class="sub-content">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sed tempor urna.</p>
+            </div>
+        </div>
+        <div class="story clearfix">
+            <div class="thumb">
+                <img src="http://ichef.bbci.co.uk/news/235/media/images/74595000/jpg/_74595283_022110683-1.jpg" />
+            </div>
+            <div class="sub-content">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sed tempor urna.</p>
+            </div>
+        </div>
     </div>
 </div>

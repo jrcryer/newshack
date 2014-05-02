@@ -49,7 +49,7 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
 function program1(depth0,data) {
   
   var buffer = "", stack1, helper;
-  buffer += "\n        <img src=\"";
+  buffer += "\n        <div class=\"main-thumb\">\n            <img src=\"";
   if (helper = helpers.thumbnail) { stack1 = helper.call(depth0, {hash:{},data:data}); }
   else { helper = (depth0 && depth0.thumbnail); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
   buffer += escapeExpression(stack1)
@@ -57,7 +57,7 @@ function program1(depth0,data) {
   if (helper = helpers.preferredLabel) { stack1 = helper.call(depth0, {hash:{},data:data}); }
   else { helper = (depth0 && depth0.preferredLabel); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
   buffer += escapeExpression(stack1)
-    + "\" />\n    ";
+    + "\" />\n        </div>\n    ";
   return buffer;
   }
 
@@ -67,10 +67,10 @@ function program1(depth0,data) {
   buffer += escapeExpression(stack1)
     + "</h2>\n    <p class=\"date\">"
     + escapeExpression((helper = helpers.date || (depth0 && depth0.date),options={hash:{},data:data},helper ? helper.call(depth0, (depth0 && depth0.eventStartDate), options) : helperMissing.call(depth0, "date", (depth0 && depth0.eventStartDate), options)))
-    + "</p>\n    ";
+    + "</p>\n\n    ";
   stack1 = helpers['if'].call(depth0, (depth0 && depth0.thumbnail), {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data});
   if(stack1 || stack1 === 0) { buffer += stack1; }
-  buffer += "\n    <div class=\"article-content\">\n        Article content\n    </div>\n</div>";
+  buffer += "\n    <div class=\"article-content\">\n        <p>Article content</p>\n    </div>\n    <div class=\"related\">\n        <div class=\"story clearfix\">\n            <div class=\"thumb\">\n                <img src=\"http://ichef.bbci.co.uk/news/235/media/images/74595000/jpg/_74595283_022110683-1.jpg\" />\n            </div>\n            <div class=\"sub-content\">\n                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sed tempor urna.</p>\n            </div>\n        </div>\n        <div class=\"story clearfix\">\n            <div class=\"thumb\">\n                <img src=\"http://ichef.bbci.co.uk/news/235/media/images/74595000/jpg/_74595283_022110683-1.jpg\" />\n            </div>\n            <div class=\"sub-content\">\n                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sed tempor urna.</p>\n            </div>\n        </div>\n        <div class=\"story clearfix\">\n            <div class=\"thumb\">\n                <img src=\"http://ichef.bbci.co.uk/news/235/media/images/74595000/jpg/_74595283_022110683-1.jpg\" />\n            </div>\n            <div class=\"sub-content\">\n                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sed tempor urna.</p>\n            </div>\n        </div>\n    </div>\n</div>";
   return buffer;
   });
 
@@ -191,7 +191,7 @@ function program1(depth0,data) {
     + "</p>\n    ";
   stack1 = helpers['if'].call(depth0, (depth0 && depth0.thumbnail), {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data});
   if(stack1 || stack1 === 0) { buffer += stack1; }
-  buffer += "\n    <div class=\"article-content\">\n        Article content\n    </div>\n</div>";
+  buffer += "\n    <div class=\"article-content\">\n        <div class=\"introduction\">\n            <div class=\"thumb\">\n                <img src=\"http://ichef.bbci.co.uk/news/235/media/images/74595000/jpg/_74595283_022110683-1.jpg\" />\n            </div>\n            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sed tempor urna. Suspendisse congue, arcu at dictum volutpat, ante risus placerat massa, sed condimentum nisi dui ac est. Proin condimentum rhoncus felis ut aliquam. Donec urna arcu, commodo nec urna facilisis.</p>\n        </div>\n        <div class=\"related\">\n            <div class=\"story clearfix\">\n                <div class=\"thumb\">\n                    <img src=\"http://ichef.bbci.co.uk/news/235/media/images/74595000/jpg/_74595283_022110683-1.jpg\" />\n                </div>\n                <div class=\"sub-content\">\n                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sed tempor urna.</p>\n                </div>\n            </div>\n            <div class=\"story clearfix\">\n                <div class=\"thumb\">\n                    <img src=\"http://ichef.bbci.co.uk/news/235/media/images/74595000/jpg/_74595283_022110683-1.jpg\" />\n                </div>\n                <div class=\"sub-content\">\n                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sed tempor urna.</p>\n                </div>\n            </div>\n            <div class=\"story clearfix\">\n                <div class=\"thumb\">\n                    <img src=\"http://ichef.bbci.co.uk/news/235/media/images/74595000/jpg/_74595283_022110683-1.jpg\" />\n                </div>\n                <div class=\"sub-content\">\n                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sed tempor urna.</p>\n                </div>\n            </div>\n        </div>\n    </div>\n</div>";
   return buffer;
   });
 

@@ -7830,7 +7830,31 @@ td.visible-print {
 .article .date {
   color: #b90000;
 }
-/* line 12, ../../app/styles/modules/_story.scss */
+/* line 13, ../../app/styles/modules/_story.scss */
+.article .introduction img, .article .main-thumb img {
+  width: 100%;
+}
+/* line 18, ../../app/styles/modules/_story.scss */
+.article .related img {
+  float: left;
+  width: 33%;
+  margin-top: 0;
+}
+/* line 23, ../../app/styles/modules/_story.scss */
+.article .related .sub-content {
+  float: right;
+  width: 62%;
+}
+/* line 29, ../../app/styles/modules/_story.scss */
+.large .article .related img {
+  width: 33%;
+}
+/* line 32, ../../app/styles/modules/_story.scss */
+.large .article .related .sub-content {
+  float: right;
+  width: 65%;
+}
+/* line 38, ../../app/styles/modules/_story.scss */
 .article img {
   margin: 8px 0;
 }

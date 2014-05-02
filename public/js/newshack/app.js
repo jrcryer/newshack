@@ -28,7 +28,8 @@ define([
       $(function() {
         $('.widget').each(function() {
           var widget = $(this);
-          var story  = $('.widget').data('story');
+          var story  = widget.data('story');
+          var isModal = widget.parent().hasClass('modal');
 
           if (story === undefined) {
             return;
@@ -45,7 +46,8 @@ define([
             var header = $('.header', widget).height();
             var title  = $('.title', widget).height();
             var topics = $('.topics', widget).height();
-            var height = (480 - (header + title + topics)) + 'px';
+            var totalHeight = isModal ? 320 : 480;
+            var height = (totalHeight - (header + title + topics)) + 'px';
             $('.content', widget).height(height);
             $('.slide', widget).height(height);
           });
