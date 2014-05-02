@@ -7753,11 +7753,15 @@ td.visible-print {
   background: url(/img/storyline.png) repeat-y;
 }
 /* line 4, ../../app/styles/modules/_storyline.scss */
+.small .storyline {
+  background: url(/img/storyline-small.png) repeat-y -8px 0;
+}
+/* line 8, ../../app/styles/modules/_storyline.scss */
 .storyline a {
   color: #333;
   text-decoration: none;
 }
-/* line 9, ../../app/styles/modules/_storyline.scss */
+/* line 13, ../../app/styles/modules/_storyline.scss */
 .storyline .year {
   display: block;
   background: white;
@@ -7765,6 +7769,10 @@ td.visible-print {
   padding: 8px;
   margin: 8px 0 8px 16px;
   text-align: center;
+}
+/* line 21, ../../app/styles/modules/_storyline.scss */
+.small .storyline .year {
+  margin: 8px 0 8px 0;
 }
 /* line 21, ../../app/components/sass-bootstrap/lib/_mixins.scss */
 .storyline .story:before, .storyline .story:after {
@@ -7777,7 +7785,7 @@ td.visible-print {
 .storyline .story:after {
   clear: both;
 }
-/* line 22, ../../app/styles/modules/_storyline.scss */
+/* line 30, ../../app/styles/modules/_storyline.scss */
 .storyline .date {
   float: left;
   font-size: 1em;
@@ -7790,21 +7798,29 @@ td.visible-print {
   border-radius: 45px;
   border: 1px solid white;
 }
-/* line 34, ../../app/styles/modules/_storyline.scss */
+/* line 42, ../../app/styles/modules/_storyline.scss */
+.small .storyline .date {
+  margin: 8px 0 8px 0;
+}
+/* line 46, ../../app/styles/modules/_storyline.scss */
 .storyline .day {
   display: block;
   font-size: 2.25em;
   line-height: 1em;
 }
-/* line 39, ../../app/styles/modules/_storyline.scss */
+/* line 51, ../../app/styles/modules/_storyline.scss */
 .storyline .month {
   display: block;
 }
-/* line 42, ../../app/styles/modules/_storyline.scss */
+/* line 54, ../../app/styles/modules/_storyline.scss */
 .storyline .title {
   margin: 32px 0 0 120px;
   padding: 16px;
   background: white;
+}
+/* line 59, ../../app/styles/modules/_storyline.scss */
+.small .storyline .title {
+  margin: 16px 0 0 88px;
 }
 
 /* line 12, ../../app/styles/app.scss */
