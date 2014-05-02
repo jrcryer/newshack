@@ -18,9 +18,9 @@
         <header>
             <nav class="container">
                 <ul>
-                    <li><a href="/preview/side/{{ story }}" class="btn btn-default btn-sm active" role="button">Side widget</a></li>
-                    <li><a href="/preview/full/{{ story }}" class="btn btn-default btn-sm active" role="button">Full width</a></li>
-                    <li><a href="/preview/stream/{{ story }}" class="btn btn-default btn-sm active" role="button">Stream view</a></li>
+                    <li><a href="/preview/side/{{ story }}?title={{ title }}" class="btn btn-default btn-sm active" role="button">Article view</a></li>
+                    <li><a href="/preview/full/{{ story }}?title={{ title }}" class="btn btn-default btn-sm active" role="button">Full view</a></li>
+                    <li><a href="/preview/stream/{{ story }}?title={{ title }}" class="btn btn-default btn-sm active" role="button">Stream view</a></li>
                 </ul>
             </nav>
         </header>
