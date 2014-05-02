@@ -1,14 +1,15 @@
 <script style="text/javascript">
   $(document).ready(function () {
+
       $('a.open-widget').click(function (evt) {
-          var widget = $("#hidden-widget");
-          widget.show();
-          widget.css({
-              position:"absolute",
-              top: evt.pageY + 8,
-              left: evt.pageX
-          });
-          evt.preventDefaults();
+            var widget = $("#hidden-widget");
+            widget.show();
+            widget.css({
+                position:"absolute",
+                top: evt.pageY + 8,
+                left: evt.pageX
+            });
+          evt.preventDefault();
       });
       $("#hidden-widget").hide();
     });
@@ -18,7 +19,7 @@
 <h3 class="comp-stream__date"><span>02.05.2014</span></h3>
 
 <div class="row">
-    <h6 class="col-md-1">09:03</h6>
+    <h6 class="col-md-1 stream-time">09:03</h6>
     <figure class="col-md-3">
         <a data-toggle="modal" data-target=".bs-example-modal-lg" href="#/news/uk-politics-27247910">
             <img src="http://ichef.bbci.co.uk/news/235/media/images/74588000/jpg/_74588344_74588343.jpg" class="js-image-replace">
@@ -36,7 +37,7 @@
 <hr />
 
 <div class="row">
-    <h6 class="col-md-1">09:03</h6>
+    <h6 class="col-md-1 stream-time">09:26</h6>
     <figure class="col-md-3">
         <a data-toggle="modal" data-target=".bs-example-modal-lg" href="#/news/uk-politics-27247910">
             <img src="http://ichef.bbci.co.uk/news/235/media/images/74586000/jpg/_74586154_mcguinnessgiveshisreactiontoadamsarrest09(2).jpg" class="js-image-replace">
@@ -54,7 +55,7 @@
 <hr />
 
 <div class="row">
-    <h6 class="col-md-1">09:03</h6>
+    <h6 class="col-md-1 stream-time">09:48</h6>
     <figure class="col-md-3">
         <a data-toggle="modal" data-target=".bs-example-modal-lg" href="#/news/uk-politics-27247910">
             <img src="http://ichef.bbci.co.uk/news/235/media/images/74577000/jpg/_74577330_74577329.jpg" class="js-image-replace">
@@ -72,7 +73,7 @@
 <hr />
 
 <div class="row">
-    <h6 class="col-md-1">09:03</h6>
+    <h6 class="col-md-1 stream-time">10:13</h6>
     <figure class="col-md-3">
         <a data-toggle="modal" data-target=".bs-example-modal-lg" href="#/news/uk-politics-27247910">
             <img src="http://ichef.bbci.co.uk/news/235/media/images/74572000/jpg/_74572058_mercerquits.jpg" class="js-image-replace">
@@ -90,7 +91,7 @@
 <hr />
 
 <div class="row">
-    <h6 class="col-md-1">09:03</h6>
+    <h6 class="col-md-1 stream-time">10:43</h6>
     <figure class="col-md-3">
         <a data-toggle="modal" data-target=".bs-example-modal-lg" href="#/news/uk-politics-27247910">
             <img src="http://ichef.bbci.co.uk/news/235/media/images/74569000/jpg/_74569295_lepenmarchbbc.jpg" class="js-image-replace">
@@ -108,7 +109,7 @@
 <hr />
 
 <div class="row">
-    <h6 class="col-md-1">09:03</h6>
+    <h6 class="col-md-1 stream-time">10:48</h6>
     <figure class="col-md-3">
         <a data-toggle="modal" data-target=".bs-example-modal-lg" href="#/news/uk-politics-27247910">
             <img src="http://ichef.bbci.co.uk/news/235/media/images/74588000/jpg/_74588305_74582378.jpg" class="js-image-replace">

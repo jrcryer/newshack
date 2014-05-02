@@ -7682,6 +7682,11 @@ td.visible-print {
 }
 
 /* line 50, ../../app/styles/modules/_layout.scss */
+.stream-time {
+  font-size: 18px;
+}
+
+/* line 54, ../../app/styles/modules/_layout.scss */
 .slide {
   float: left;
   padding: 0 8px;
