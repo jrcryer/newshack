@@ -51,7 +51,7 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   if (helper = helpers.preferredLabel) { stack1 = helper.call(depth0, {hash:{},data:data}); }
   else { helper = (depth0 && depth0.preferredLabel); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
   buffer += escapeExpression(stack1)
-    + "</h2>\n    <p>"
+    + "</h2>\n    <p class=\"date\">"
     + escapeExpression((helper = helpers.date || (depth0 && depth0.date),options={hash:{},data:data},helper ? helper.call(depth0, (depth0 && depth0.eventStartDate), options) : helperMissing.call(depth0, "date", (depth0 && depth0.eventStartDate), options)))
     + "</p>\n    <div class=\"article-content\">\n        Article content\n    </div>\n</div>";
   return buffer;

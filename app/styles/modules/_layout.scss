@@ -18,23 +18,23 @@
     background: $highlight;
     height: 100%;
     width: 300%;
-    overflow-y: scroll;
-    overflow-x: hidden;
     transition: all 0.8s ease-in-out;
-    -webkit-transform: translateX(-32.75%);
-    transform: translateX(-32.75%);
+    -webkit-transform: translateX(-33.3333333333333333%);
+    transform: translateX(-33.3333333333333333%  );
 
     &.back {
         transform: translateX(0%);
     }
     &.forward {
-        -webkit-transform: translateX(-65.5%);
-        transform: translateX(-65.5%);
+        -webkit-transform: translateX(-66.33333333333%);
+        transform: translateX(-66.333333333%);
     }
 }
 
 .slide {
     float: left;
     padding: 0 8px;
-    width: 32.95%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    width: 33.3333333333333333%;
 }

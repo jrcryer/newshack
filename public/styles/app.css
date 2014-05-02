@@ -7652,27 +7652,27 @@ td.visible-print {
   background: #cecece;
   height: 100%;
   width: 300%;
-  overflow-y: scroll;
-  overflow-x: hidden;
   transition: all 0.8s ease-in-out;
-  -webkit-transform: translateX(-32.75%);
-  transform: translateX(-32.75%);
+  -webkit-transform: translateX(-33.33333%);
+  transform: translateX(-33.33333%);
 }
-/* line 27, ../../app/styles/modules/_layout.scss */
+/* line 25, ../../app/styles/modules/_layout.scss */
 .content.back {
   transform: translateX(0%);
 }
-/* line 30, ../../app/styles/modules/_layout.scss */
+/* line 28, ../../app/styles/modules/_layout.scss */
 .content.forward {
-  -webkit-transform: translateX(-65.5%);
-  transform: translateX(-65.5%);
+  -webkit-transform: translateX(-66.33333%);
+  transform: translateX(-66.33333%);
 }
 
-/* line 36, ../../app/styles/modules/_layout.scss */
+/* line 34, ../../app/styles/modules/_layout.scss */
 .slide {
   float: left;
   padding: 0 8px;
-  width: 32.95%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  width: 33.3333333333333333%;
 }
 
 /* line 1, ../../app/styles/modules/_header.scss */
@@ -7801,14 +7801,19 @@ td.visible-print {
 
 /* line 1, ../../app/styles/modules/_story.scss */
 .story-article {
+  padding: 8px;
   background: white;
 }
-/* line 4, ../../app/styles/modules/_story.scss */
+/* line 5, ../../app/styles/modules/_story.scss */
 .story-article h2 {
-  font-size: 1.25em;
+  font-size: 1.675em;
   margin: 0 0 8px;
 }
-/* line 8, ../../app/styles/modules/_story.scss */
+/* line 9, ../../app/styles/modules/_story.scss */
+.story-article .date {
+  color: #b90000;
+}
+/* line 12, ../../app/styles/modules/_story.scss */
 .story-article img {
   margin: 8px 0;
 }
