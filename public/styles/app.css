@@ -7778,6 +7778,11 @@ td.visible-print {
   left: 8px;
 }
 
+/* line 51, ../../app/styles/modules/_button.scss */
+.large .navigation {
+  display: inline-block;
+}
+
 /* line 1, ../../app/styles/modules/_topics.scss */
 .topics-list {
   margin: 0 0 8px;
