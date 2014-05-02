@@ -7664,10 +7664,11 @@ td.visible-print {
 }
 /* line 30, ../../app/styles/modules/_layout.scss */
 .content.forward {
+  -webkit-transform: translateX(-65.5%);
   transform: translateX(-65.5%);
 }
 
-/* line 35, ../../app/styles/modules/_layout.scss */
+/* line 36, ../../app/styles/modules/_layout.scss */
 .slide {
   float: left;
   padding: 0 8px;
@@ -7798,6 +7799,20 @@ td.visible-print {
   text-decoration: underline;
 }
 
+/* line 1, ../../app/styles/modules/_story.scss */
+.story-article {
+  background: white;
+}
+/* line 4, ../../app/styles/modules/_story.scss */
+.story-article h2 {
+  font-size: 1.25em;
+  margin: 0 0 8px;
+}
+/* line 8, ../../app/styles/modules/_story.scss */
+.story-article img {
+  margin: 8px 0;
+}
+
 /* line 1, ../../app/styles/modules/_storyline.scss */
 .storyline {
   background: url(/img/storyline.png) repeat-y;
@@ -7873,7 +7888,7 @@ td.visible-print {
   margin: 16px 0 0 88px;
 }
 
-/* line 12, ../../app/styles/app.scss */
+/* line 13, ../../app/styles/app.scss */
 body {
   margin: 24px 0;
 }

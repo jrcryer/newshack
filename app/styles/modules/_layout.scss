@@ -28,6 +28,7 @@
         transform: translateX(0%);
     }
     &.forward {
+        -webkit-transform: translateX(-65.5%);
         transform: translateX(-65.5%);
     }
 }
