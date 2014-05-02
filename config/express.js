@@ -38,7 +38,8 @@ module.exports = function(app) {
     // set .html as the default extension
     app.engine(config.templateEngine, hbs.express3({
       defaultLayout: config.root + '/app/views/layouts/default',
-      layoutsDir: config.root + '/app/views/layouts'
+      layoutsDir: config.root + '/app/views/layouts',
+      partialsDir: config.root + '/app/views/partials'
     }));
     app.set('view engine', config.templateEngine);
 
