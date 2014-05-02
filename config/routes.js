@@ -10,4 +10,8 @@ module.exports = function(app) {
 
   var story = require('../app/controllers/story');
   app.get('/story/:id', story.render);
+
+  var preview = require('../app/controllers/preview');
+  app.get('/preview/side/:id', preview.side);
+  app.get('/preview/full/:id', preview.full);
 };

@@ -7698,6 +7698,27 @@ td.visible-print {
   font-size: 1.5em;
 }
 
+/* line 28, ../../app/styles/modules/_header.scss */
+#preview {
+  margin-top: 0;
+}
+/* line 31, ../../app/styles/modules/_header.scss */
+#preview header {
+  padding: 12px 0;
+  background-color: #333;
+}
+/* line 35, ../../app/styles/modules/_header.scss */
+#preview header ul {
+  margin: 0;
+  float: right;
+  list-style: none;
+}
+/* line 40, ../../app/styles/modules/_header.scss */
+#preview header ul li {
+  display: inline-block;
+  margin-left: 8px;
+}
+
 /* line 2, ../../app/styles/modules/_button.scss */
 .btn-share a {
   display: block;
