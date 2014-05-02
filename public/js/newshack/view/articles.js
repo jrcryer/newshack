@@ -33,7 +33,8 @@ define(['jquery', 'underscore', 'backbone', 'template'], function($, _, Backbone
         this.template({
           summary: this.storyline.synopsis,
           first: _.first(items),
-          articles: _.rest(items, 1)
+          articles: _.rest(items, 1),
+          thumbnail: this.storyline.thumbnail
         })
       );
       return this;

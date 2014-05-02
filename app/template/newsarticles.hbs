@@ -12,9 +12,11 @@
 </div>
 <div class="articles">
     <div class="feature-article">
-        <div class="thumb">
-            <img src="http://ichef.bbci.co.uk/news/625/media/images/74468000/jpg/_74468762_74468752.jpg" />
-        </div>
+        {{#if thumbnail}}
+            <div class="thumb">
+                <img src="{{thumbnail}}" />
+            </div>
+        {{/if}}
         <h2>{{first.title}}</h2>
         <div class="desc">
             {{first.description}}
