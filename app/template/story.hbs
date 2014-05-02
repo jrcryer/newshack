@@ -11,29 +11,11 @@
         <p>{{synopsis}}</p>
     </div>
     <div class="related">
-        <div class="story clearfix">
-            <div class="thumb">
-                <img src="http://ichef.bbci.co.uk/news/235/media/images/74595000/jpg/_74595283_022110683-1.jpg" />
-            </div>
-            <div class="sub-content">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sed tempor urna.</p>
-            </div>
-        </div>
-        <div class="story clearfix">
-            <div class="thumb">
-                <img src="http://ichef.bbci.co.uk/news/235/media/images/74595000/jpg/_74595283_022110683-1.jpg" />
-            </div>
-            <div class="sub-content">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sed tempor urna.</p>
-            </div>
-        </div>
-        <div class="story clearfix">
-            <div class="thumb">
-                <img src="http://ichef.bbci.co.uk/news/235/media/images/74595000/jpg/_74595283_022110683-1.jpg" />
-            </div>
-            <div class="sub-content">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sed tempor urna.</p>
-            </div>
-        </div>
+    	{{#if newsItems}}
+    		<h2>Key articles</h2>
+    		{{#each newsItems}}
+    			<a href="{{ id }}">{{ title }}</a>
+    		{{/each}}
+    	{{/if}}
     </div>
 </div>
