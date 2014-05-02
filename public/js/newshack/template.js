@@ -73,7 +73,7 @@ function program1(depth0,data) {
 this["JST"]["app/template/story.hbs"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {
   this.compilerInfo = [4,'>= 1.0.0'];
 helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
-  var buffer = "", stack1, helper, options, functionType="function", escapeExpression=this.escapeExpression, helperMissing=helpers.helperMissing, self=this;
+  var buffer = "", stack1, helper, options, functionType="function", escapeExpression=this.escapeExpression, self=this, helperMissing=helpers.helperMissing;
 
 function program1(depth0,data) {
   
@@ -90,6 +90,30 @@ function program1(depth0,data) {
   return buffer;
   }
 
+function program3(depth0,data) {
+  
+  var buffer = "", stack1;
+  buffer += "\n    		<h2>Key articles</h2>\n    		";
+  stack1 = helpers.each.call(depth0, (depth0 && depth0.newsItems), {hash:{},inverse:self.noop,fn:self.program(4, program4, data),data:data});
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n    	";
+  return buffer;
+  }
+function program4(depth0,data) {
+  
+  var buffer = "", stack1, helper;
+  buffer += "\n    			<a href=\"";
+  if (helper = helpers.id) { stack1 = helper.call(depth0, {hash:{},data:data}); }
+  else { helper = (depth0 && depth0.id); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
+  buffer += escapeExpression(stack1)
+    + "\">";
+  if (helper = helpers.title) { stack1 = helper.call(depth0, {hash:{},data:data}); }
+  else { helper = (depth0 && depth0.title); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
+  buffer += escapeExpression(stack1)
+    + "</a>\n    		";
+  return buffer;
+  }
+
   buffer += "<div class=\"story-article article\">\n    <h2>";
   if (helper = helpers.preferredLabel) { stack1 = helper.call(depth0, {hash:{},data:data}); }
   else { helper = (depth0 && depth0.preferredLabel); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
@@ -99,7 +123,14 @@ function program1(depth0,data) {
     + "</p>\n\n    ";
   stack1 = helpers['if'].call(depth0, (depth0 && depth0.thumbnail), {hash:{},inverse:self.noop,fn:self.program(1, program1, data),data:data});
   if(stack1 || stack1 === 0) { buffer += stack1; }
-  buffer += "\n    <div class=\"article-content\">\n        <p>Article content</p>\n    </div>\n    <div class=\"related\">\n        <div class=\"story clearfix\">\n            <div class=\"thumb\">\n                <img src=\"http://ichef.bbci.co.uk/news/235/media/images/74595000/jpg/_74595283_022110683-1.jpg\" />\n            </div>\n            <div class=\"sub-content\">\n                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sed tempor urna.</p>\n            </div>\n        </div>\n        <div class=\"story clearfix\">\n            <div class=\"thumb\">\n                <img src=\"http://ichef.bbci.co.uk/news/235/media/images/74595000/jpg/_74595283_022110683-1.jpg\" />\n            </div>\n            <div class=\"sub-content\">\n                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sed tempor urna.</p>\n            </div>\n        </div>\n        <div class=\"story clearfix\">\n            <div class=\"thumb\">\n                <img src=\"http://ichef.bbci.co.uk/news/235/media/images/74595000/jpg/_74595283_022110683-1.jpg\" />\n            </div>\n            <div class=\"sub-content\">\n                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc sed tempor urna.</p>\n            </div>\n        </div>\n    </div>\n</div>";
+  buffer += "\n    <div class=\"article-content\">\n        <p>";
+  if (helper = helpers.synopsis) { stack1 = helper.call(depth0, {hash:{},data:data}); }
+  else { helper = (depth0 && depth0.synopsis); stack1 = typeof helper === functionType ? helper.call(depth0, {hash:{},data:data}) : helper; }
+  buffer += escapeExpression(stack1)
+    + "</p>\n    </div>\n    <div class=\"related\">\n    	";
+  stack1 = helpers['if'].call(depth0, (depth0 && depth0.newsItems), {hash:{},inverse:self.noop,fn:self.program(3, program3, data),data:data});
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\n    </div>\n</div>";
   return buffer;
   });
 
@@ -128,9 +159,9 @@ function program2(depth0,data) {
     + escapeExpression((helper = helpers.day || (depth0 && depth0.day),options={hash:{},data:data},helper ? helper.call(depth0, (depth0 && depth0.eventStartDate), options) : helperMissing.call(depth0, "day", (depth0 && depth0.eventStartDate), options)))
     + "</span>\n                            <span class=\"month\">"
     + escapeExpression((helper = helpers.month || (depth0 && depth0.month),options={hash:{},data:data},helper ? helper.call(depth0, (depth0 && depth0.eventStartDate), options) : helperMissing.call(depth0, "month", (depth0 && depth0.eventStartDate), options)))
-    + "</span>\n                        </div>\n                        <div class=\"title\">\n                            "
+    + "</span>\n                        </div>\n                        <div class=\"title\">\n                            <a href=\"#\">"
     + escapeExpression(((stack1 = (depth0 && depth0.preferredLabel)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
-    + "\n                        </div>\n                    </a>\n                </div>\n            ";
+    + "</a>\n                        </div>\n                    </a>\n                </div>\n            ";
   return buffer;
   }
 
@@ -152,9 +183,9 @@ function program5(depth0,data) {
     + escapeExpression((helper = helpers.day || (depth0 && depth0.day),options={hash:{},data:data},helper ? helper.call(depth0, (depth0 && depth0.eventStartDate), options) : helperMissing.call(depth0, "day", (depth0 && depth0.eventStartDate), options)))
     + "</span>\n                        <span class=\"month\">"
     + escapeExpression((helper = helpers.month || (depth0 && depth0.month),options={hash:{},data:data},helper ? helper.call(depth0, (depth0 && depth0.eventStartDate), options) : helperMissing.call(depth0, "month", (depth0 && depth0.eventStartDate), options)))
-    + "</span>\n                    </div>\n                    <div class=\"title\">\n                        "
+    + "</span>\n                    </div>\n                    <div class=\"title\">\n                        <a href=\"#\">"
     + escapeExpression(((stack1 = (depth0 && depth0.preferredLabel)),typeof stack1 === functionType ? stack1.apply(depth0) : stack1))
-    + "\n                    </div>\n                </a>\n            </div>\n        ";
+    + "</a>\n                    </div>\n                </a>\n            </div>\n        ";
   return buffer;
   }
 
