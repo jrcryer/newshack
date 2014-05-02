@@ -9,6 +9,11 @@ define(['jquery', 'underscore', 'backbone', 'template'], function($, _, Backbone
     storyline: null,
 
     /**
+     * @var show key events only
+     */
+    showKeyEventsOnly: false,
+
+    /**
      * @var template
      */
     template: Template['app/template/storyline.hbs'],
@@ -23,13 +28,19 @@ define(['jquery', 'underscore', 'backbone', 'template'], function($, _, Backbone
     /**
      * Set the storyline
      */
-    initialize: function(storyline) {
+    initialize: function(storyline, data) {
       this.storyline = storyline.storyline;
+      this.showKeyEventsOnly = data.showKeyEventsOnly;
     },
 
     render: function() {
       var data = this.storyline.events;
 
+      if (this.showKeyEventsOnly) {
+        data = _.filter(data, function(event) {
+          return event.isKey;
+        });
+      }
       if (data.length > 0) {
         return this.renderMultipleEvents(data);
       }

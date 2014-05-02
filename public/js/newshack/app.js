@@ -41,7 +41,7 @@ define([
             new Views.Title(data.storyline).render();
             new Views.Navigation().render();
             new Views.Topics(data.storyline.topics).render();
-            Backbone.trigger('storyline:show');
+            Backbone.trigger('storyline:show', {showKeyEventsOnly: isModal});
 
             var header = $('.header', widget).height();
             var title  = $('.title', widget).height();

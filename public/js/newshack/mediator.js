@@ -31,8 +31,8 @@ define([
     });
   };
 
-  var showStoryLine = function() {
-    widget.find('.second').html(new Views.Storyline(storyline).render());
+  var showStoryLine = function(data) {
+    widget.find('.second').html(new Views.Storyline(storyline, data).render());
   };
 
   var showStoryLineFromPreviousPage = function() {
