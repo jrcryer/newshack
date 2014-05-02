@@ -7641,6 +7641,12 @@ td.visible-print {
 }
 
 /* line 11, ../../app/styles/modules/_layout.scss */
+.header-group {
+  position: relative;
+  padding: 0 0 0 56px;
+}
+
+/* line 16, ../../app/styles/modules/_layout.scss */
 .content {
   padding: 8px;
   background: #cecece;
@@ -7651,16 +7657,16 @@ td.visible-print {
   transition: all 0.8s ease-in-out;
   transform: translateX(-32.75%);
 }
-/* line 21, ../../app/styles/modules/_layout.scss */
+/* line 26, ../../app/styles/modules/_layout.scss */
 .content.back {
   transform: translateX(0%);
 }
-/* line 24, ../../app/styles/modules/_layout.scss */
+/* line 29, ../../app/styles/modules/_layout.scss */
 .content.forward {
   transform: translateX(-65.5%);
 }
 
-/* line 29, ../../app/styles/modules/_layout.scss */
+/* line 34, ../../app/styles/modules/_layout.scss */
 .slide {
   float: left;
   padding: 0 8px;
@@ -7689,12 +7695,7 @@ td.visible-print {
 }
 /* line 18, ../../app/styles/modules/_header.scss */
 .title h1 {
-  margin: 0 108px;
   font-size: 1.5em;
-}
-/* line 22, ../../app/styles/modules/_header.scss */
-.small .title h1 {
-  margin: 0;
 }
 
 /* line 2, ../../app/styles/modules/_button.scss */
@@ -7703,18 +7704,49 @@ td.visible-print {
   width: 48px;
   height: 48px;
   text-indent: -9999px;
+  transition: all 0.5s ease-in-out;
   background: #cecece url("/img/share.png") no-repeat 8px 8px;
 }
 /* line 10, ../../app/styles/modules/_button.scss */
+.btn-share a:hover, .btn-share a:focus {
+  background-color: #b4b4b4;
+}
+/* line 15, ../../app/styles/modules/_button.scss */
 .header .btn-share {
   position: absolute;
   top: -8px;
   right: 0;
 }
 
+/* line 24, ../../app/styles/modules/_button.scss */
+.btn-back a {
+  display: block;
+  width: 48px;
+  height: 48px;
+  text-indent: -9999px;
+  transition: all 0.5s ease-in-out;
+  opacity: 1s;
+  background: #cecece url("/img/back.png") no-repeat 0px 0px;
+}
+/* line 33, ../../app/styles/modules/_button.scss */
+.btn-back a:hover, .btn-back a:focus {
+  background-color: #b4b4b4;
+}
+/* line 37, ../../app/styles/modules/_button.scss */
+.btn-back a.fadeIn {
+  opacity: 0;
+  transition: all 0.3s ease-in 0.8s;
+}
+/* line 43, ../../app/styles/modules/_button.scss */
+.header-group .btn-back {
+  position: absolute;
+  top: 0;
+  left: 8px;
+}
+
 /* line 1, ../../app/styles/modules/_topics.scss */
 .topics-list {
-  margin: 0 108px 8px;
+  margin: 0 0 8px;
   padding: 0;
   list-style: none;
 }
@@ -7730,10 +7762,6 @@ td.visible-print {
   clear: both;
 }
 /* line 7, ../../app/styles/modules/_topics.scss */
-.small .topics-list {
-  margin: 0 0 8px;
-}
-/* line 11, ../../app/styles/modules/_topics.scss */
 .topics-list .topic {
   float: left;
   display: block;
@@ -7743,7 +7771,7 @@ td.visible-print {
   text-decoration: none;
   color: white;
 }
-/* line 20, ../../app/styles/modules/_topics.scss */
+/* line 16, ../../app/styles/modules/_topics.scss */
 .topics-list .topic:hover {
   text-decoration: underline;
 }

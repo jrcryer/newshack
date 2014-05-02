@@ -4,12 +4,45 @@
         width: 48px;
         height: 48px;
         text-indent: -9999px;
+        transition: all 0.5s ease-in-out;
         background: $highlight url('/img/share.png') no-repeat 8px 8px;
+
+        &:hover, &:focus {
+            background-color: darken($highlight, 10%);
+        }
     }
 
     .header & {
         position: absolute;
         top: -8px;
         right: 0;
+    }
+}
+
+.btn-back {
+
+    a {
+        display: block;
+        width: 48px;
+        height: 48px;
+        text-indent: -9999px;
+        transition: all 0.5s ease-in-out;
+        opacity: 1s;
+        background: $highlight url('/img/back.png') no-repeat 0px 0px;
+
+        &:hover, &:focus {
+            background-color: darken($highlight, 10%);
+        }
+
+        &.fadeIn {
+            opacity: 0;
+            transition: all 0.3s ease-in 0.8s;
+        }
+    }
+
+    .header-group & {
+        position: absolute;
+        top: 0  ;
+        left: 8px;
     }
 }

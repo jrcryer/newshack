@@ -38,7 +38,7 @@ helpers = this.merge(helpers, Handlebars.helpers); data = data || {};
   
 
 
-  return "<div class=\"btn-back\">\n    <a href=\"#\" class=\"back\">Back</a>\n</div>";
+  return "<div class=\"btn-back\">\n    <a href=\"#\" class=\"back fadeIn\">Back</a>\n</div>";
   });
 
 this["JST"]["app/template/story.hbs"] = Handlebars.template(function (Handlebars,depth0,helpers,partials,data) {

@@ -34,7 +34,11 @@ define(['jquery', 'backbone', 'template'], function($, Backbone, Template) {
         this.$el.html('');
         return this;
       }
+      var self = this;
       this.$el.html(this.template());
+      setTimeout(function() {
+        this.$el.find('.fadeIn').removeClass('.fadeIn');
+      }, 300);
       return this;
     },
 

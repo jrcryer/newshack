@@ -1,12 +1,8 @@
 .topics-list {
-    margin: 0 108px 8px;
+    margin: 0 0 8px;
     padding: 0;
     list-style: none;
     @include clearfix;
-
-    .small & {
-        margin: 0 0 8px;
-    }
 
     .topic {
         float: left;
