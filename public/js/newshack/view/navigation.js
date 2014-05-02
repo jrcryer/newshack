@@ -27,6 +27,7 @@ define(['jquery', 'backbone', 'template'], function($, Backbone, Template) {
      */
     initialize: function() {
       Backbone.on('enable-navigation', this.onNavigationEnabled, this);
+      Backbone.on('disable-navigation', this.onNavigationDisabled, this);
     },
 
     render: function() {
@@ -34,11 +35,8 @@ define(['jquery', 'backbone', 'template'], function($, Backbone, Template) {
         this.$el.html('');
         return this;
       }
-      var self = this;
       this.$el.html(this.template());
-      setTimeout(function() {
-        this.$el.find('.fadeIn').removeClass('.fadeIn');
-      }, 300);
+      this.$el.find('.fadeIn').removeClass('fadeIn');
       return this;
     },
 

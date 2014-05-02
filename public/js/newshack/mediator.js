@@ -29,6 +29,11 @@ define([
     widget.find('.second').html(new Views.Storyline(storyline).render());
   };
 
+  var showStoryLineFromPreviousPage = function() {
+    widget.find('.content').removeClass('forward');
+    Backbone.trigger('disable-navigation');
+  };
+
   var forward = function(data) {
     widget.find('.third').html(data.view);
     widget.find('.content').addClass('forward');
@@ -51,6 +56,7 @@ define([
     Backbone.on('story:show', showStory);
     Backbone.on('topic:show', showStory);
     Backbone.on('storyline:show', showStoryLine);
+    Backbone.on('navigate-back', showStoryLineFromPreviousPage);
     Backbone.on('push', forward);
     Backbone.on('pop', back);
 
