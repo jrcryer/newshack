@@ -7707,7 +7707,7 @@ td.visible-print {
 }
 /* line 18, ../../app/styles/modules/_header.scss */
 .title h1 {
-  font-size: 1.5em;
+  font-size: 2em;
 }
 
 /* line 23, ../../app/styles/modules/_header.scss */
@@ -7785,7 +7785,7 @@ td.visible-print {
 
 /* line 1, ../../app/styles/modules/_topics.scss */
 .topics-list {
-  margin: 0 0 8px;
+  margin: 0 0 16px;
   padding: 0;
   list-style: none;
 }
@@ -7823,7 +7823,7 @@ td.visible-print {
 }
 /* line 5, ../../app/styles/modules/_story.scss */
 .article h2 {
-  font-size: 1.675em;
+  font-size: 1.66666666666667em;
   margin: 0 0 8px;
 }
 /* line 9, ../../app/styles/modules/_story.scss */
