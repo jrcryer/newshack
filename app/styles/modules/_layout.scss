@@ -6,6 +6,10 @@
     &.small {
         width: 320px;
     }
+
+    &.large {
+        width: auto;
+    }
 }
 
 .header-group {
@@ -28,6 +32,13 @@
     &.forward {
         -webkit-transform: translateX(-66.33333333333%);
         transform: translateX(-66.333333333%);
+    }
+}
+
+.large {
+    .content.forward {
+        -webkit-transform: translateX(-65.8%);
+        transform: translateX(-65.8%);
     }
 }
 

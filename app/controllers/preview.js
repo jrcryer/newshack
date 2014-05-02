@@ -13,6 +13,6 @@ exports.full = function(req, res) {
   res.render('preview/full', {
     layout: 'preview',
     story: req.params.id,
-    size: ''
+    size: 'large'
   });
 };

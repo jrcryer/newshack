@@ -7639,14 +7639,18 @@ td.visible-print {
 .widget.small {
   width: 320px;
 }
+/* line 10, ../../app/styles/modules/_layout.scss */
+.widget.large {
+  width: auto;
+}
 
-/* line 11, ../../app/styles/modules/_layout.scss */
+/* line 15, ../../app/styles/modules/_layout.scss */
 .header-group {
   position: relative;
   padding: 0 0 0 56px;
 }
 
-/* line 16, ../../app/styles/modules/_layout.scss */
+/* line 20, ../../app/styles/modules/_layout.scss */
 .content {
   padding: 8px;
   background: #cecece;
@@ -7656,17 +7660,35 @@ td.visible-print {
   -webkit-transform: translateX(-33.33333%);
   transform: translateX(-33.33333%);
 }
+<<<<<<< HEAD
 /* line 25, ../../app/styles/modules/_layout.scss */
 .content.back {
   transform: translateX(0%);
 }
 /* line 28, ../../app/styles/modules/_layout.scss */
+=======
+/* line 31, ../../app/styles/modules/_layout.scss */
+.content.back {
+  transform: translateX(0%);
+}
+/* line 34, ../../app/styles/modules/_layout.scss */
+>>>>>>> master
 .content.forward {
   -webkit-transform: translateX(-66.33333%);
   transform: translateX(-66.33333%);
 }
 
+<<<<<<< HEAD
 /* line 34, ../../app/styles/modules/_layout.scss */
+=======
+/* line 41, ../../app/styles/modules/_layout.scss */
+.large .content.forward {
+  -webkit-transform: translateX(-65.8%);
+  transform: translateX(-65.8%);
+}
+
+/* line 47, ../../app/styles/modules/_layout.scss */
+>>>>>>> master
 .slide {
   float: left;
   padding: 0 8px;
@@ -7766,6 +7788,11 @@ td.visible-print {
   position: absolute;
   top: 0;
   left: 8px;
+}
+
+/* line 51, ../../app/styles/modules/_button.scss */
+.large .navigation {
+  display: inline-block;
 }
 
 /* line 1, ../../app/styles/modules/_topics.scss */
