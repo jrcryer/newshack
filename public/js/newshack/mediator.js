@@ -65,10 +65,6 @@ define([
     Backbone.on('navigate-back', showStoryLineFromPreviousPage);
     Backbone.on('push', forward);
     Backbone.on('pop', back);
-
-    window.addEventListener('popstate', function(event) {
-      console.log('popstate fired!');
-    });
   };
 
   return {
