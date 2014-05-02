@@ -8,8 +8,8 @@ exports.render = function(req, res) {
 
   var url = serivceUrl + req.params.id;
 
-  if (req.params.id === "sample") {
-    url = sampleUrl + "sample";
+  if (req.params.id === 'sample') {
+    url = sampleUrl + 'sample';
   }
 
   request.get(url, function (error, response, body) {
