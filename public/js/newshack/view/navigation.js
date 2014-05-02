@@ -50,8 +50,9 @@ define(['jquery', 'backbone', 'template'], function($, Backbone, Template) {
       this.render();
     },
 
-    onBack: function() {
+    onBack: function(e) {
       Backbone.trigger('navigate-back');
+      e.preventDefault();
     }
   });
 });
